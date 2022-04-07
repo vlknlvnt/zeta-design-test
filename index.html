@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeta Design Project</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+
+</head>
+<body>
+    <!-- navigation starts -->
+    <nav class="d-flex align-items-center position-fixed w-100 top-0 white-bg">
+        <div class="container d-flex flex-row justify-content-between align-items-center">
+            <img src="assets/images/cropped-zetadesign-navbar-logo.svg" alt="">
+            <div class="nav-list w-lg-auto w-100 py-lg-0 py-3 position-lg-static position-absolute white-lg-bg green-bg dark-lg-text white-text left-0">
+                <ul class="d-flex flex-lg-row flex-column py-lg-0 py-3 text-center bold">
+                    <li class="py-lg-0 py-1 position-relative selected"><a href="">Product</a></li>
+                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">Services</a></li>
+                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">References</a></li>
+                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">Contact Us</a></li>
+                </ul>
+                <div class="nav-phone-info d-lg-none d-flex position-absolute align-items-center py-3 left-50">
+                    <img src="assets/icons/phone-navbar.svg"></img>
+                    <p class="d-lg-none pl-0-5 text-white">+256 706 311 781</p>     
+                </div>                
+            </div>  
+            <div class="nav-button d-none d-lg-block"><a href="" class="dark-text bold">LET'S HAVE A TALK</a></div>
+            <div class="nav-toggle-btn d-lg-none">
+                <button class="hamburger-menu-btn d-flex d-lg-none" onclick="navToggle()">
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                  </button>
+            </div>
+        </div>
+        
+    </nav>
+    <!-- navigation ends -->
+
+    <!-- slider section starts -->
+    <section class="slider-section py-3">
+        <div class="container" style="height: 833px; background-color:indianred;">
+            <div class="main-carousel">
+                <div class="carousel-cell">1</div>
+                <div class="carousel-cell">2</div>
+                <div class="carousel-cell">3</div>
+                <div class="carousel-cell">4</div>
+                <div class="carousel-cell">5</div>
+                <div class="carousel-cell">6</div>
+              </div>
+        </div>
+    </section>
+
+    <h1>Lorem ipsum dolor sit.</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <!-- slider section ends -->
+
+    <script src="assets/js/flickity.js"></script> <!-- flickity js source -->
+
+    <script>
+
+        /* navbar toggle starts */
+        function navToggle () {
+            var navbar = document.querySelector('.nav-list');
+            navbar.classList.toggle('nav-slide');
+
+            var hamburgerBtn = document.querySelector('.hamburger-menu-btn');
+            hamburgerBtn.classList.toggle('open');
+        }
+        /* navbar toggle ends */
+
+        /* flickity starts */
+
+        var elem = document.querySelector('.main-carousel');
+        var flkty = new Flickity( elem, {
+        // options
+        cellAlign: 'left',
+        contain: true
+        });
+
+        // element argument can be a selector string
+        //   for an individual element
+        var flkty = new Flickity( '.main-carousel', {
+        // options
+        });
+        /* flickity ends */
+
+    </script>
+    
+</body>
+</html>
