@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeta Design - Products</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <style>
+
+    /* mobile view starts */
+
+    /* products section starts */
+    #products-section {
+        background-color: var(--green);
+    }
+
+    #products-section > .container:first-child > p, #products-section > .container:first-child > h3 {
+        padding-left: 15px;
+    }
+
+    #products-section > .container:last-child > a {
+        width: 170px;
+        border-radius: 35px;
+        transition: var(--transition);
+        background-image: url(assets/icons/products-show-more.svg);
+        background-repeat: no-repeat;
+        background-size: 14px;
+        background-position-x: 140px;
+        background-position-y: 50%;
+    }
+
+
+    #products-section > .container:last-child > a:hover {
+        color: black;
+        background-color: white;
+        background-image: url('assets/icons/products-show-more-hover.svg');
+    }
+
+    .product-card > img {
+        height: 330px;
+        object-fit: fill;
+    }
+
+    @media (min-width: 768px) {
+        #products-section > .container:last-child {
+            padding-bottom: 160px;
+        }
+    }
+    /* products section ends */
+
+    /* mobile view ends */
+
+    /* desktop view starts */
+    @media (min-width: 992px) {
+        #products-section > .container:first-child > p, #products-section > .container:first-child > h3 {
+            padding-left: 75px;
+        }
+    }
+    /* desktop view ends */
+
+
+
+    </style>
+
+</head>
+<body>
+    <!-- navigation starts -->
+    <nav class="d-flex align-items-center position-fixed w-100 top-0 white-bg">
+        <div class="container d-flex flex-row justify-content-between align-items-center">
+            <img src="assets/images/cropped-zetadesign-navbar-logo.svg" alt="">
+            <div class="nav-list w-lg-auto w-100 py-lg-0 py-3 position-lg-static position-absolute white-lg-bg green-bg dark-lg-text white-text left-0">
+                <ul class="d-flex flex-lg-row flex-column py-lg-0 py-3 text-center bold">
+                    <li class="py-lg-0 py-1 position-relative selected"><a href="index.html">Products</a></li>
+                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">Services</a></li>
+                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">References</a></li>
+                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">Contact Us</a></li>
+                </ul>
+                <div class="nav-phone-info d-lg-none d-flex position-absolute align-items-center py-3 left-50">
+                    <img src="assets/icons/phone-navbar.svg"></img>
+                    <p class="d-lg-none pl-0-5 text-white">+256 706 311 781</p>     
+                </div>                
+            </div>  
+            <div class="nav-button d-none d-lg-block"><a href="" class="dark-text bold">LET'S HAVE A TALK</a></div>
+            <div class="nav-toggle-btn d-lg-none">
+                <button class="hamburger-menu-btn d-flex d-lg-none" onclick="navToggle()">
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                  </button>
+            </div>
+        </div>
+        
+    </nav>
+    <!-- navigation ends -->
+
+    <!-- products starts -->
+    <section class="products-section pt-4" id="products-section">
+        <div class="container">
+            <p class="bold">our provided</p>
+            <h3 class="white-text pb-1">PRODUCTS:</h3>
+            <p class="regular white-text">Lorem ipsum dolor sit.</p>
+            <p class="regular white-text">Lorem ipsum dolor sit.</p>            
+        </div>
+        <div class="row container m-auto">
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div>
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div>
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div>    
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div>
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div>     
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div>
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div>  
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div>
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div> 
+            <a class="d-block d-md-none dark-bg white-text bold p-1-5 m-auto my-3" href="">SHOW MORE</a>            
+        </div>
+
+    </section>
+    <!-- products ends -->
+
+    <!-- footer starts -->
+    <footer class="white-text dark-bg pt-2 pb-1 regular">
+        <div class="container row m-auto">
+            <div class="col-md-6 p-0">
+                    <ul>
+                        <li class="pt-1">
+                            <img src="assets/icons/footer-logo.svg" alt="">                     
+                        </li>
+                        <li class="pt-1">
+                            <p><a href="">Privacy Terms</a></p>
+                            
+                        </li>
+                        <li class="pt-1 d-md-none">
+                            <p><a  href="">Contact Us</a></p>
+                            
+                        </li>
+                    </ul>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <ul class="ml-5 mt-1">
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-mail-icon.svg" alt=""><p class="pl-1">zetadesignsltd@gmail.com</p></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-phone-icon.svg" alt=""><p class="pl-1">+256 706 311 781</p></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-loc-icon.svg" alt=""><p class="pl-1">Plot 7/8 2nd Street Industrial Area Kampala/Uganda</p></li>
+                </ul>
+            </div>  
+            <p class="w-100 pt-4 text-center">Copyrights reserved by Perfist inc.</p> 
+        </div>
+
+    </footer>
+    <!-- footer ends -->
+  
+
+    <script src="assets/js/flickity.js"></script> <!-- flickity js source -->
+
+    <script>
+
+        /* navbar toggle starts */
+        function navToggle () {
+            var navbar = document.querySelector('.nav-list');
+            navbar.classList.toggle('nav-slide');
+
+            var hamburgerBtn = document.querySelector('.hamburger-menu-btn');
+            hamburgerBtn.classList.toggle('open');
+        }
+        /* navbar toggle ends */
+
+        /* flickity for slider starts */
+
+        var elem = document.querySelector('.main-carousel');
+        var flkty = new Flickity( elem, {
+        // options
+        cellAlign: 'left',
+        contain: true
+        });
+
+        // element argument can be a selector string
+        //   for an individual element
+        var flkty = new Flickity( '.main-carousel', {
+        // options
+        });
+
+        /* flickity for slider ends */
+
+
+    </script>
+    
+</body>
+</html>
