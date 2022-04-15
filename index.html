@@ -8,6 +8,328 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/global.css">
 
+    <style>
+
+        /* mobile view starts */
+
+        /* slider section starts */
+
+        .slider-inner-row {
+            height: 400px;
+            top: 50%;
+            transform: translateY(-50%);
+            gap: 0;
+        }
+
+        .slider-section, .carousel-cell {
+            font-size: 30px;
+        }
+
+        .slider-discover-btn {
+            font-size: 15px;
+            line-height: 18px;
+            border: 4px solid var(--green);
+            border-radius: 30px;
+            padding: 13px 16px;
+            transition: var(--transition)
+        }
+
+        .slider-discover-btn:hover {
+            background-color: var(--green);
+            color: white;
+        }
+
+        .slider-section img {
+            height: 600px;
+            object-fit: cover;    
+            border-radius: 25px;        
+        }     
+        .current-slide {
+            font-size: 36px;
+        }        
+        .current-slide + p {
+            font-size: 16px;
+        }
+
+        .current-slide::after {
+            height: 3px;
+            width: 38px;
+            content: "";
+            position: absolute;
+            top: 47px;
+            transform: translateX(-50%);
+            background-color: var(--green);
+            z-index: 99;
+            left: 65%;
+            border-radius: 44px;
+        }
+
+        .slider-section, .carousel-cell {
+            font-size: 26px;
+        }
+
+        /* slider section ends */
+
+
+        /* options section starts */
+        .options-section a {
+            font-size: 15px;
+            line-height: 18px;
+            border: 4px solid var(--green);
+            border-radius: 30px;
+            padding: 13px 16px;
+            transition: var(--transition);
+            width: 130px;
+        }
+
+        .options-section a:hover {
+            background-color: var(--green);
+        }
+
+        .options-top {
+            width: 1rem;
+        }
+
+        /* selecting only first element of the class */
+        .options-top ~ .options-top::after {
+            height: 1px;
+            width: 24px;
+            content: "";
+            position: absolute;
+            top: 61px;
+            background-color: var(--green);
+            z-index: 99;
+            left: 51px;
+        }
+
+        .option-title {
+            font-size: 24px;
+        }
+
+        .option-text {
+            font-size: 14px;
+        }
+
+        .options-section img {
+            width: 12px;
+        }   
+        
+        .options-section > .row {
+            gap: 3rem;
+        }        
+        /* options section ends */
+
+
+        /* summary section starts */
+        .summary-section {
+            background-image: url('assets/images/summary-bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 830px;
+        }    
+
+        .summary-section > .row {
+            gap: 86px;
+        }
+        
+        .summary-section > div > div > div {
+            border: 3px var(--green-light) solid;
+            border-radius: 30px;
+            width: 250px;
+            font-size: 1.2rem;
+        }
+
+        /* summary section ends */
+
+        /* clients section starts */
+        .clients-section h2 {
+            font-size: 32px;
+        }
+
+        .clients-section a {
+            font-size: 15px;
+            line-height: 18px;
+            border: 4px solid var(--green);
+            border-radius: 30px;
+            padding: 13px 16px;
+            transition: var(--transition);
+            width: 130px;
+        }
+
+        .clients-section a:hover {
+            color: white;
+            background-color: var(--green);
+        }
+
+        .clients-wrapper {
+            margin: 100px 0;
+        }
+
+        .clients-carousel-cell {
+            height: 106px;
+            border-radius: 25px;
+        }
+
+        .clients-cell-inner {
+            width: auto;
+            background: var(--green);
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 5px 7px 4px rgba(229,229,229,1);
+        }
+
+        .clients-cell-inner > img {
+            width: 50px;
+        }
+        /* clients section ends */
+
+        /* contact section starts */
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+        }
+
+        iframe, .contact-section > .row > div > div {
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px 3px rgba(229,229,229,1);
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+        }
+
+        input {
+            border-bottom: 1px black solid;
+            background: transparent;
+            padding: 0.5px
+        }
+
+        input[type=submit] {
+            background-color: var(--green);
+            border: none;
+            border-radius: 20px;
+            width: 240px;
+            height: 40px;
+            color: white;
+            background-image: url('assets/icons/send-icon.svg');
+            background-repeat: no-repeat;
+            background-position-x: 65%;
+            background-position-y: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        input[type=submit]:hover {
+            background-color: white;
+            color: var(--green);
+            background-image: url('assets/icons/send-icon-hover.svg');
+        }
+    
+        /* contact section ends */
+    
+
+        /* mobile view ends */
+
+        @media (min-width: 576px) {
+            .slider-inner-row {
+                height: 300px;
+            } 
+
+            .slider-section {
+                font-size: 48px;
+            }   
+            
+            .current-slide + p {
+                font-size: 24px;
+            }
+
+            .flickity-prev-next-button {
+                top: 37%;
+            }            
+        }
+
+        @media (min-width: 768px) {
+            .current-slide::after {
+                left: 82%;
+            }
+
+            input[type=submit] {
+                width: 300px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            /* slider section starts */
+            .slider-section, .carousel-cell {
+                width: 100%; 
+                padding: 0; 
+                border-radius: 30px; 
+                font-size: 36px;
+            }
+
+            .slider-section img {
+                height: 833px;     
+            }
+
+            .slider-inner-row {
+                height: 250px;
+                top: 50%;
+                transform: translateY(-50%);
+                gap: 50px;
+            }
+
+            .flickity-prev-next-button {
+                top: 40%;
+            }
+        
+            /* slider section ends */
+
+            /* options section starts */
+
+            .options-section > .row {
+                gap: 0;
+            }
+
+            /* options section ends */
+
+            /* summary section starts */
+            .summary-section {
+                background-size: contain;
+            }
+
+            .summary-section > .row {
+                gap: 0;
+            }
+
+            /* summary section ends */
+
+            /* contact section starts */
+            input[type=submit] {
+                width: 240px;
+            }
+            /* contact section ends */
+
+        }
+
+        @media (min-width: 1200px) {
+            .slider-section, .carousel-cell {
+                font-size: 30px;
+            }
+
+            .slider-inner-row {
+                height: 200px;
+                gap: 100px;
+            }
+        }
+
+
+    </style>
+
 </head>
 <body>
     <!-- navigation starts -->
@@ -40,23 +362,245 @@
     <!-- navigation ends -->
 
     <!-- slider section starts -->
-    <section class="slider-section py-3">
-        <div class="container" style="height: 833px; background-color:indianred;">
+    <section class="slider-section py-3 container" id="slider-section">
             <div class="main-carousel">
-                <div class="carousel-cell">1</div>
-                <div class="carousel-cell">2</div>
-                <div class="carousel-cell">3</div>
-                <div class="carousel-cell">4</div>
-                <div class="carousel-cell">5</div>
-                <div class="carousel-cell">6</div>
-              </div>
-        </div>
+                <div class="carousel-cell">
+                    <img class="w-100" src="assets/images/slide-img-1.jpg" alt="">
+                    <div class="row slider-inner-row position-absolute bottom-0 w-100 m-0 px-1 px-md-4 justify-content-between justify-content-lg-right align-items-start">
+                        <div class="col-9 col-md-6 col-lg-5 d-md-block d-flex align-items-center justify-content-center flex-column white-text">
+                        <p class="pb-2"><strong>Let's build</strong> <br> <span class="black">your dreams</span> <br><span class="regular">with Zeta Construction</span></p>
+                        <a class="slider-discover-btn regular w-auto mr-auto d-block d-md-inline-block text-center" href="">DISCOVER NOW</a>
+                    </div>
+                        <div class="col-3 pl-4 text-right d-flex align-items-left justify-content-right">
+                            <p class="current-slide regular position-relative pl-1 pl-md-4 white-text"><strong>01</strong></p>
+                            <p class="pl-1 pl-md-2 green-text regular"><strong>/03</strong> </p>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <img class="w-100" src="assets/images/slide-img-1.jpg" alt="">
+                    <div class="row slider-inner-row position-absolute bottom-0 w-100 m-0 px-1 px-md-4 justify-content-between justify-content-lg-right align-items-start">
+                        <div class="col-9 col-md-6 col-lg-5 d-md-block d-flex align-items-center justify-content-center flex-column white-text">
+                        <p class="pb-2"><strong>Let's build</strong> <br> <span class="black">your dreams</span> <br><span class="regular">with Zeta Construction</span></p>
+                        <a class="slider-discover-btn regular w-auto mr-auto d-block d-md-inline-block text-center" href="">DISCOVER NOW</a>
+                    </div>
+                        <div class="col-3 pl-4 text-right d-flex align-items-left justify-content-right">
+                            <p class="current-slide regular position-relative pl-1 pl-md-4 white-text"><strong>02</strong></p>
+                            <p class="pl-1 pl-md-2 green-text regular"><strong>/03</strong> </p>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <img class="w-100" src="assets/images/slide-img-1.jpg" alt="">
+                    <div class="row slider-inner-row position-absolute bottom-0 w-100 m-0 px-1 px-md-4 justify-content-between justify-content-lg-right align-items-start">
+                        <div class="col-9 col-md-6 col-lg-5 d-md-block d-flex align-items-center justify-content-center flex-column white-text">
+                        <p class="pb-2"><strong>Let's build</strong> <br> <span class="black">your dreams</span> <br><span class="regular">with Zeta Construction</span></p>
+                        <a class="slider-discover-btn regular w-auto mr-auto d-block d-md-inline-block text-center" href="">DISCOVER NOW</a>
+                    </div>
+                        <div class="col-3 pl-4 text-right d-flex align-items-left justify-content-right">
+                            <p class="current-slide regular position-relative pl-1 pl-md-4 white-text"><strong>03</strong></p>
+                            <p class="pl-1 pl-md-2 green-text regular"><strong>/03</strong> </p>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
     </section>
 
-    <h1>Lorem ipsum dolor sit.</h1>
-    <p>Lorem ipsum dolor sit amet.</p>
-
     <!-- slider section ends -->
+
+    <!-- options section start -->
+    <section class="options-section container" id="options-section">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="dark-bg p-2-5 h-auto" style="border-radius: 25px;">
+                <p class="options-top black white-text text-center position-relative">0</p>
+                <p class="options-top black white-text text-center">1</p>
+                <div class="p-1-5 mx-auto mt-3 mb-3" style="width: 82px; height: 82px; border: 1px var(--green) solid;
+                border-radius: 50%;" >
+                    <img src="assets/icons/options-icon-1.svg" style="width: 32px; height: 32px" alt="">                    
+                </div>
+                <p class="option-title pb-1 text-center regular white-text">DESIGN</p>
+                <p class="option-text regular white-text pb-1 pl-lg-1 pl-0">Lorem ipsum dolor sit amet, consec dolor sit amet, consec tetur adipiscin elit.</p>
+                <a class="my-2 ml-1 white-text d-block bold" href="">Learn More</a>
+                <ul class="mt-5 mb-4 ml-1">
+                    <li><p class="white-text bold green-text">Guaranteed</p></li>
+                    <li class="pt-1"><img src="assets/icons/optionlist-icon-1.svg" alt=""><p class="white-text d-inline-block pl-0-5">Creativity</p></li>
+                    <li class="pt-1"><img src="assets/icons/optionlist-icon-2.svg" alt=""><p class="white-text d-inline-block pl-0-5">Innovation</p></li>
+                </ul>
+            </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="dark-bg p-2-5 h-auto" style="border-radius: 25px;">
+                <p class="options-top black white-text text-center position-relative">0</p>
+                <p class="options-top black white-text text-center">2</p>
+                <div class="p-1-5 mx-auto mt-3 mb-3" style="width: 82px; height: 82px; border: 1px var(--green) solid;
+                border-radius: 50%;" >
+                    <img src="assets/icons/options-icon-2.svg" style="width: 32px; height: 32px" alt="">                    
+                </div>
+                <p class="option-title pb-1 text-center regular white-text">TRADE</p>
+                <p class="option-text regular white-text pb-1 pl-lg-1 pl-0">Lorem ipsum dolor sit amet, consec dolor sit amet, consec tetur adipiscin elit.</p>
+                <a class="my-2 ml-1 white-text d-block bold" href="">Learn More</a>
+                <ul class="mt-5 mb-4 ml-1">
+                    <li><p class="white-text bold green-text">Guaranteed</p></li>
+                    <li class="pt-1"><img src="assets/icons/optionlist-icon-3.svg" alt=""><p class="white-text d-inline-block pl-0-5">Customer Satisfaction</p></li>
+                    <li class="pt-1"><img src="assets/icons/optionlist-icon-4.svg" alt=""><p class="white-text d-inline-block pl-0-5">High Quality</p></li>
+                </ul>
+            </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="dark-bg p-2-5 h-auto" style="border-radius: 25px;">
+                <p class="options-top black white-text text-center position-relative">0</p>
+                <p class="options-top black white-text text-center">3</p>
+                <div class="p-1-5 mx-auto mt-3 mb-3" style="width: 82px; height: 82px; border: 1px var(--green) solid;
+                border-radius: 50%;" >
+                    <img src="assets/icons/options-icon-3.svg" style="width: 32px; height: 32px" alt="">                    
+                </div>
+                <p class="option-title pb-1 text-center regular white-text">FABRICATION</p>
+                <p class="option-text regular white-text pb-1 pl-lg-1 pl-0">Lorem ipsum dolor sit amet, consec dolor sit amet, consec tetur adipiscin elit.</p>
+                <a class="my-2 ml-1 white-text d-block bold" href="">Learn More</a>
+                <ul class="mt-5 mb-4 ml-1">
+                    <li><p class="white-text bold green-text">Guaranteed</p></li>
+                    <li class="pt-1"><img src="assets/icons/optionlist-icon-5.svg" alt=""><p class="white-text d-inline-block pl-0-5">Cost Effective</p></li>
+                    <li class="pt-1"><img src="assets/icons/optionlist-icon-6.svg" alt=""><p class="white-text d-inline-block pl-0-5">Warranty</p></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- options section end -->
+
+    <!-- summary section starts -->
+    <section class="summary-section my-5 position-relative d-flex align-items-center text-center w-100" id="summary-section">
+        <div class="row position-absolute regular w-100 px-5 white-text">
+            <div class="col-lg-4">
+                <div class="m-auto py-2-5 px-3-5">
+                    <p class="bold counter" data-target="50" id="partnership-counter">0</p>
+                    <p>PARTNERSHIP</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="m-auto py-2-5 px-3-5">
+                    <p class="bold counter" data-target="250">0</p>
+                    <p>PROJECT</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="m-auto py-2-5 px-3-5">
+                    <p class="bold counter" data-target="350">0</p>
+                    <p>CLIENT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- summary section ends -->
+
+    <!-- clients section starts -->
+    <section class="clients-section container text-center" id="clients-section">
+        <p class="bold">ALL OF THEM</p>
+        <h2 class="green-text">CLIENTS</h2>
+        <div class="clients-wrapper">
+
+            <!-- Flickity HTML init -->
+            <div class="clients-carousel d-md-flex flex-wrap justify-content-center" data-flickity='{ "watchCSS": true }'>
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner py-1-5 px-3-5">
+                        <img src="assets/icons/ametal.svg" alt="">
+                    </div>
+                </div>
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner py-1-5 px-3-5">
+                        <img src="assets/icons/ametal.svg" alt="">
+                    </div>                    
+                </div>
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner py-1-5 px-3-5">
+                        <img src="assets/icons/ars-construction-1.png" alt="">
+                    </div>                    
+                </div>
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner py-1-5 px-3-5">
+                        <img src="assets/icons/ametal.svg" alt="">
+                    </div>                    
+                </div>
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner py-1-5 px-3-5">
+                        <img src="assets/icons/ametal.svg" alt="">
+                    </div>                    
+                </div>
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner py-1-5 px-3-5">
+                        <img src="assets/icons/ametal.svg" alt="">
+                    </div>                    
+                </div>
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner py-1-5 px-3-5">
+                        <img src="assets/icons/ametal.svg" alt="">
+                    </div>                    
+                </div>                
+            </div>
+            
+        </div>
+        <a class="my-1 d-block mx-auto" href="#">VIEW ALL</a>
+
+    </section>
+    <!-- clients section ends -->
+
+    <!-- contact section starts -->
+    <section class="contact-section container my-4" id="contact-section">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column">
+                <h2 class="green-text pb-1">HERE WE ARE</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888164.400225498!2d31.733888385233417!3d1.3251658140792526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a69f6499f945%3A0x874155ce43014549!2sUganda!5e0!3m2!1sen!2str!4v1649919833189!5m2!1sen!2str" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+            <div class="col-lg-6 pt-2">
+                <div class="grey-bg py-5">
+                    <h2 class="pl-3 pb-1">Get an Offer!</h2>
+                    <form action="" class="d-flex flex-column pl-2 pr-4">
+                        <label class="py-0-5 regular" for="name-surname"><p>Name-Surname</p><input class="w-75" type="text" name="name-surname" id="name-surname"></label>
+                        <label class="py-1 regular" for="phone-number"><p>Phone Number</p><input class="w-75" type="tel" name="phone-number" id="phone-number"></label>
+                        <label class="py-1 regular" for="email"><p>Email</p><input class="w-75" type="text" name="email" id="email"></label>
+                        <label class="py-1 regular" for="message"><p>Your Message</p><input class="w-75" type="text" name="message" id="message"></label>
+                        <label class="py-1 regular" for="checkbox"><input class="mr-0-5" type="checkbox" id="checkbox" name="checkbox" required>I agree to the processing of personal data</label>
+                        <input class="m-auto mt-0-5 bold" type="submit" value="SEND">
+                    </form>
+                </div>
+
+            </div>            
+        </div>
+
+    </section>
+    <!-- contact section ends -->
+
+    <!-- footer starts -->
+    <footer class="white-text dark-bg pt-2 pb-1 regular">
+        <div class="container row m-auto">
+            <div class="col-md-6 p-0">
+                    <ul>
+                        <li class="pt-1">
+                            <img src="assets/icons/footer-logo.svg" alt="">                     
+                        </li>
+                        <li class="pt-1">
+                            <p><a href="">Privacy Terms</a></p>
+                            
+                        </li>
+                        <li class="pt-1 d-md-none">
+                            <p><a  href="">Contact Us</a></p>
+                            
+                        </li>
+                    </ul>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <ul class="ml-5 mt-1">
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-mail-icon.svg" alt=""><p class="pl-1">zetadesignsltd@gmail.com</p></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-phone-icon.svg" alt=""><p class="pl-1">+256 706 311 781</p></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-loc-icon.svg" alt=""><p class="pl-1">Plot 7/8 2nd Street Industrial Area Kampala/Uganda</p></li>
+                </ul>
+            </div>  
+            <p class="w-100 pt-4 text-center">Copyrights reserved by Perfist inc.</p> 
+        </div>
+
+    </footer>
+    <!-- footer ends -->
+  
 
     <script src="assets/js/flickity.js"></script> <!-- flickity js source -->
 
@@ -72,7 +616,7 @@
         }
         /* navbar toggle ends */
 
-        /* flickity starts */
+        /* flickity for slider starts */
 
         var elem = document.querySelector('.main-carousel');
         var flkty = new Flickity( elem, {
@@ -86,7 +630,50 @@
         var flkty = new Flickity( '.main-carousel', {
         // options
         });
-        /* flickity ends */
+
+        /* flickity for slider ends */
+
+        /* summary counters start */
+        const counters = document.querySelectorAll('.counter');
+        const speed = 50; // The lower the slower
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                // Lower inc to slow and higher to slow
+                const inc = target / speed;
+
+                // console.log(inc);
+                // console.log(count);
+
+                // Check if target is reached
+                if (count < target) {
+                    // Add inc to count and output in counter
+                    counter.innerText = count + inc;
+                    // Call function every ms
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            /*var partnershipCounter = document.getElementById('partnership-counter').innerHTML = ('+ ') + this.count;*/
+            
+            updateCount();
+        });
+        /* summary counters end */
+
+        /* flickity for clients start */
+        var elemClients = document.querySelector('.clients-carousel');
+        var flkty = new Flickity( elemClients, {
+        // options
+        cellAlign: 'left',
+        prevNextButtons: false,
+        contain: true
+        });
+        /* flickity for clients end */
 
     </script>
     
