@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeta Design - Product Inner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <style>
+
+    /* mobile view starts */
+
+    #product-section img {
+        object-fit: cover;
+    }
+
+    #product-section h1 {
+        transform: translateX(-50%);
+        font-size: 16px;
+        top: 25%;
+    }
+
+    #product-section > .container {
+        margin-top:-50px;
+        background: transparent;
+    }
+
+    #product-section > .container > img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    #product-section ul li::before {
+        display: none;
+    }
+
+    #product-section:nth-child(2) {
+        padding-bottom: 80px;
+    }
+
+    #specifications-title {
+        font-size: 10vw;
+    }
+    
+
+    @media (min-width: 576px){
+        #product-section h1 {
+            font-size: 24px;
+        }
+        #product-section > .container {
+            margin-top:-70px;
+        }
+        #specifications-title {
+            font-size: 54px;
+        }
+    }
+        
+    @media (min-width: 768px){
+        #product-section h1 {
+        font-size: 32px;
+        }
+        #product-section > .container {
+        margin-top:-100px;
+        }
+        #specifications-title {
+            font-size: 74px;
+        }
+    } 
+    
+ 
+
+    /* mobile view ends */
+
+    /* desktop view starts */
+
+    @media (min-width: 992px){
+        #product-section h1 {
+            font-size: 48px;
+            top: 35%;
+        }
+
+        #specifications-main {
+            height: 70%;
+        }
+
+        #specifications-main + div {
+            height: 30%;
+        }
+
+        #product-section ul li::before {
+            content: "•";
+            color: var(--green);
+            font-size: 35px;
+            position: absolute;
+            left: -20px;
+            top: 0px;
+            display: block;
+        }
+
+        #product-section ul li p {
+            font-size: 18px;
+        }
+
+        #specifications-title {
+            transform: rotate(-90deg) translateY(240%) translateX(-51%);
+            transform-origin: top;
+            top: 0;
+            right: 0;
+            font-size: 50px;
+            display: block;
+        }
+
+        #product-section:nth-child(2) {
+            padding-bottom: 160px;
+        }
+    } 
+    
+    @media (min-width: 1200px){
+        #product-section h1 {
+        font-size: 64px;
+        }
+
+        #specifications-title {
+        font-size: 60px;
+    }
+    } 
+    
+    @media (min-width: 1400px){
+        #product-section h1 {
+            font-size: 80px;
+        }
+
+        #specifications-title {
+            font-size: 70px;
+        }
+    } 
+
+    /* desktop view ends */
+
+
+
+    </style>
+
+</head>
+<body>
+    <!-- navigation starts -->
+    <nav class="d-flex align-items-center position-fixed w-100 top-0 white-bg">
+        <div class="container d-flex flex-row justify-content-between align-items-center">
+            <img src="assets/images/cropped-zetadesign-navbar-logo.svg" alt="">
+            <div class="nav-list w-lg-auto w-100 py-lg-0 py-3 position-lg-static position-absolute white-lg-bg green-bg dark-lg-text white-text left-0">
+                <ul class="d-flex flex-lg-row flex-column py-lg-0 py-3 text-center bold">
+                    <li class="py-lg-0 py-1 position-relative selected"><a href="index.html">Products</a></li>
+                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">Services</a></li>
+                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">References</a></li>
+                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">Contact Us</a></li>
+                </ul>
+                <div class="nav-phone-info d-lg-none d-flex position-absolute align-items-center py-3 left-50">
+                    <img src="assets/icons/phone-navbar.svg"></img>
+                    <p class="d-lg-none pl-0-5 text-white">+256 706 311 781</p>     
+                </div>                
+            </div>  
+            <div class="nav-button d-none d-lg-block"><a href="" class="dark-text bold">LET'S HAVE A TALK</a></div>
+            <div class="nav-toggle-btn d-lg-none">
+                <button class="hamburger-menu-btn d-flex d-lg-none" onclick="navToggle()">
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                  </button>
+            </div>
+        </div>
+        
+    </nav>
+    <!-- navigation ends -->
+
+    <!-- product inner starts -->
+    <section class="green-bg" id="product-section">
+        <div class="position-relative">
+            <img class="w-100 h-100 d-block" src="assets/images/product-section-top.png" alt="">
+            <h1 class="black white-text position-absolute left-50">ROOFING <span CLASS="green-text">SHEET</span></h1>              
+        </div>
+       
+        <div class="container position-relative">
+            
+            <img class="w-100 d-block" src="assets/images/overview.png" alt="">
+            <div class="white-bg regular p-2-5">
+                <p class="bold green-text pb-1-5">Overview</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio laborum ipsa fuga sed consequatur obcaecati odio veritatis blanditiis animi aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint tenetur expedita consectetur sunt reprehenderit sapiente eveniet accusamus nostrum at fuga. </p>
+            </div>
+            <div class="container row p-0 m-0">
+                <div class="col-lg-5 p-0">
+                    <img class="w-100 d-block" src="assets/images/product-inner-1.png" alt="">
+                </div>
+                <div class="col-lg-7 p-0 position-relative">
+                    <div class="dark-bg white-text bold position-relative d-flex align-items-center flex-column-reverse flex-lg-row" id="specifications-main">
+                        <ul class="w-100 pl-0 pl-lg-5 py-3 py-lg-0 text-center text-lg-left">
+                            <li class="position-relative py-1"><p>Width: 97cm</p></li>
+                            <li class="position-relative py-1"><p>Length: 200cm</p></li>
+                            <li class="position-relative py-1"><p>Coverage Per Sheet: 1.63m2/Sheet</p></li>
+                            <li class="position-relative py-1"><p>Weight: 6,5 kg</p></li>
+                            <li class="position-relative py-1"><p>Corrugation Height:3,8cm</p></li>
+                            <li class="position-relative py-1"><p>Number Of Corrugation Per Sheet: 10 Per Sheet</p></li>
+                        </ul>
+                        <h2 class="position-lg-absolute position-static black white-text" id="specifications-title">SPECIFICATIONS</h2>
+                    </div>
+                    <div class="white-bg d-flex align-items-center justify-content-center">
+                        <h2 class="bold green-text py-3 py-lg-0">ADVANTAGES</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container row p-0 m-0 flex-column-reverse flex-lg-row">
+                <div class="col-lg-5 p-0 dark-bg white-text bold d-flex align-items-center">
+                    <ul class="w-100 pl-0 pl-lg-5 py-3 py-lg-0 text-center text-lg-left" id="list-bottom">
+                        <li class="position-relative py-1"><p>Lightweight</p></li>
+                        <li class="position-relative py-1"><p>8 years waterproofing</p></li>
+                        <li class="position-relative py-1"><p>Warranty</p></li>
+                        <li class="position-relative py-1"><p>Acoustic Insulation</p></li>
+                        <li class="position-relative py-1"><p>Aesthetic Look</p></li>
+                        <li class="position-relative py-1"><p>Asbestos Free</label></li>
+                        <li class="position-relative py-1"><p>UV Resistant</label></li>
+                        <li class="position-relative py-1"><p>Easy Installation</label></li>
+                    </ul>
+                </div>
+                <div class="col-lg-7 p-0">
+                    <img class="w-100 d-block" src="assets/images/product-inner-2.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- product inner ends -->
+
+    <!-- footer starts -->
+    <footer class="white-text dark-bg pt-2 pb-1 regular">
+        <div class="container row m-auto">
+            <div class="col-md-6 p-0">
+                    <ul>
+                        <li class="pt-1">
+                            <img src="assets/icons/footer-logo.svg" alt="">                     
+                        </li>
+                        <li class="pt-1">
+                            <p><a href="">Privacy Terms</a></p>
+                        </li>
+                        <li class="pt-1">
+                            <p><a href="">About Us</a></p>
+                        </li>
+                        <li class="pt-1 d-md-none">
+                            <p><a  href="">Contact Us</a></p>
+                            
+                        </li>
+                    </ul>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <ul class="ml-5 mt-1">
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-mail-icon.svg" alt=""><p class="pl-1">zetadesignsltd@gmail.com</p></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-phone-icon.svg" alt=""><p class="pl-1">+256 706 311 781</p></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-loc-icon.svg" alt=""><p class="pl-1">Plot 7/8 2nd Street Industrial Area Kampala/Uganda</p></li>
+                </ul>
+            </div>  
+            <p class="w-100 pt-4 text-center">Copyrights reserved by Perfist inc.</p> 
+        </div>
+
+    </footer>
+    <!-- footer ends -->
+  
+
+    <script src="assets/js/flickity.js"></script> <!-- flickity js source -->
+
+    <script>
+
+        /* navbar toggle starts */
+        function navToggle () {
+            var navbar = document.querySelector('.nav-list');
+            navbar.classList.toggle('nav-slide');
+
+            var hamburgerBtn = document.querySelector('.hamburger-menu-btn');
+            hamburgerBtn.classList.toggle('open');
+        }
+        /* navbar toggle ends */
+
+        /* flickity for slider starts */
+
+        var elem = document.querySelector('.main-carousel');
+        var flkty = new Flickity( elem, {
+        // options
+        cellAlign: 'left',
+        contain: true
+        });
+
+        // element argument can be a selector string
+        //   for an individual element
+        var flkty = new Flickity( '.main-carousel', {
+        // options
+        });
+
+        /* flickity for slider ends */
+
+
+    </script>
+    
+</body>
+</html>
+
+

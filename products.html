@@ -39,9 +39,16 @@
         background-image: url('assets/icons/products-show-more-hover.svg');
     }
 
-    .product-card > img {
-        height: 330px;
+    .product-inner > img {
+        height: 450px;
         object-fit: fill;
+        filter: saturate(1);
+        transition: var(--transition);
+    }
+
+
+    .product-inner > img:hover  {
+        filter: saturate(0);
     }
 
     @media (min-width: 768px) {
@@ -104,10 +111,10 @@
             <p class="regular white-text">Lorem ipsum dolor sit.</p>
             <p class="regular white-text">Lorem ipsum dolor sit.</p>            
         </div>
-        <div class="row container m-auto">
+        <div class="row container mx-auto">
             <div class="product-card col-md-4 mt-2">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
+                    <img class="w-100 overlay" src="assets/images/product-img-1.png" alt="">
                     <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
                     <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                     <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
@@ -115,64 +122,88 @@
             </div>
             <div class="product-card col-md-4 mt-2">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <img class="w-100" src="assets/images/product-img-2.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Scaffolding</p>
                     <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                     <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
                 </div>
             </div>
             <div class="product-card col-md-4 mt-2">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <img class="w-100" src="assets/images/product-img-3.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Politcarbonate Sheet</p>
                     <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                     <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
                 </div>
             </div>    
             <div class="product-card col-md-4 mt-2">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <img class="w-100" src="assets/images/product-img-4.png" alt="">
+                    <p class="bold green-text px-2 pt-1">uPVC</p>
                     <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                     <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
                 </div>
             </div>
             <div class="product-card col-md-4 mt-2">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <img class="w-100" src="assets/images/product-img-5.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Gypsum/Cement Board</p>
                     <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                     <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
                 </div>
             </div>     
             <div class="product-card col-md-4 mt-2">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <img class="w-100" src="assets/images/product-img-6.png" alt="">
+                    <p class="bold green-text px-2 pt-1">PVC Flooring</p>
                     <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                     <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
                 </div>
             </div>
             <div class="product-card col-md-4 mt-2">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <img class="w-100" src="assets/images/product-img-7.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Mixer</p>
                     <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                     <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
                 </div>
             </div>  
             <div class="product-card col-md-4 mt-2">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <img class="w-100" src="assets/images/product-img-8.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Stone Wool</p>
                     <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                     <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
                 </div>
             </div>
             <div class="product-card col-md-4 mt-2">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-1.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
+                    <img class="w-100" src="assets/images/product-img-9.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Glass Wool</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div> 
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-10.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Scaffolding</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div> 
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-11.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Expanded Polystrene</p>
+                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                </div>
+            </div> 
+            <div class="product-card col-md-4 mt-2">
+                <div class="product-inner white-bg ">
+                    <img class="w-100" src="assets/images/product-img-12.png" alt="">
+                    <p class="bold green-text px-2 pt-1">Pergola</p>
                     <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                     <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
                 </div>
@@ -193,7 +224,9 @@
                         </li>
                         <li class="pt-1">
                             <p><a href="">Privacy Terms</a></p>
-                            
+                        </li>
+                        <li class="pt-1">
+                            <p><a href="">About Us</a></p>
                         </li>
                         <li class="pt-1 d-md-none">
                             <p><a  href="">Contact Us</a></p>
