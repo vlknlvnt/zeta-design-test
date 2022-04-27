@@ -17,38 +17,57 @@
         background-color: var(--green);
     }
 
+    #products-section h2:first-of-type {
+        font-size: 40px;
+    }    
+
     #products-section > .container:first-child > p, #products-section > .container:first-child > h3 {
         padding-left: 15px;
     }
 
     #products-section > .container:last-child > a {
-        width: 170px;
         border-radius: 35px;
         transition: var(--transition);
-        background-image: url(assets/icons/products-show-more.svg);
-        background-repeat: no-repeat;
-        background-size: 14px;
-        background-position-x: 140px;
-        background-position-y: 50%;
     }
+
+    #products-section > .container:last-child > a::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-image: url('assets/icons/products-showmore.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }    
 
 
     #products-section > .container:last-child > a:hover {
         color: black;
         background-color: white;
-        background-image: url('assets/icons/products-show-more-hover.svg');
     }
+
+    #products-section > .container:last-child > a:hover::after {
+        background-image: url('assets/icons/products-showmore-hover.svg');
+    }
+
 
     .product-inner > img {
         height: 450px;
-        object-fit: fill;
-        filter: saturate(1);
+        object-fit: cover;
+        filter: saturate(0);
         transition: var(--transition);
     }
 
+    .product-inner > div > a {
+        width: 140px;
+    }
 
-    .product-inner > img:hover  {
-        filter: saturate(0);
+    .product-inner:hover img {
+        filter: saturate(1);
     }
 
     @media (min-width: 768px) {
@@ -77,20 +96,20 @@
     <!-- navigation starts -->
     <nav class="d-flex align-items-center position-fixed w-100 top-0 white-bg">
         <div class="container d-flex flex-row justify-content-between align-items-center">
-            <img src="assets/images/cropped-zetadesign-navbar-logo.svg" alt="">
+            <a href="index.html"><img src="assets/images/cropped-zetadesign-navbar-logo.svg" alt=""></a>
             <div class="nav-list w-lg-auto w-100 py-lg-0 py-3 position-lg-static position-absolute white-lg-bg green-bg dark-lg-text white-text left-0">
                 <ul class="d-flex flex-lg-row flex-column py-lg-0 py-3 text-center bold">
-                    <li class="py-lg-0 py-1 position-relative selected"><a href="index.html">Products</a></li>
-                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">Services</a></li>
-                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">References</a></li>
-                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">Contact Us</a></li>
+                    <li class="py-lg-0 py-2 position-relative selected"><a href="products.html">Products</a></li>
+                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="services.html">Services</a></li>
+                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="references.html">References</a></li>
+                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="contact.html">Contact Us</a></li>
                 </ul>
                 <div class="nav-phone-info d-lg-none d-flex position-absolute align-items-center py-3 left-50">
                     <img src="assets/icons/phone-navbar.svg"></img>
-                    <p class="d-lg-none pl-0-5 text-white">+256 706 311 781</p>     
+                    <p class="d-lg-none regular pl-0-5 text-white">+256 706 311 781</p>     
                 </div>                
             </div>  
-            <div class="nav-button d-none d-lg-block"><a href="" class="dark-text bold">LET'S HAVE A TALK</a></div>
+            <div class="nav-button d-none d-lg-block"><a href="contact.html#contact-wrapper" class="main-text bold">LET'S HAVE A TALK</a></div>
             <div class="nav-toggle-btn d-lg-none">
                 <button class="hamburger-menu-btn d-flex d-lg-none" onclick="navToggle()">
                     <span class="hamburger-menu-line position-absolute green-bg"></span>
@@ -104,111 +123,138 @@
     <!-- navigation ends -->
 
     <!-- products starts -->
-    <section class="products-section pt-4" id="products-section">
-        <div class="container">
-            <p class="bold">our provided</p>
-            <h3 class="white-text pb-1">PRODUCTS:</h3>
+    <section class="products-section pt-lg-5 pt-4" id="products-section">
+
+        <div class="container px-lg-0">
+            <p class="bold dark-text text-left text-lg-center pl-0">OUR PROVIDED</p>
+            <h2 class="white-text pb-1 text-left text-lg-center">PRODUCTS</h2>
             <p class="regular white-text">Lorem ipsum dolor sit.</p>
             <p class="regular white-text">Lorem ipsum dolor sit.</p>            
         </div>
-        <div class="row container mx-auto">
-            <div class="product-card col-md-4 mt-2">
-                <div class="product-inner white-bg ">
-                    <img class="w-100 overlay" src="assets/images/product-img-1.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Roofing Sheet</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+        <div class="row container mx-auto px-0">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+                <div class="product-inner white-bg">
+                    <img class="w-100 d-block" src="assets/images/product-img-1.png" alt="">
+                    <div class="p-3">
+                        <p><span class="bold green-text">Roofing Sheet</span><br><br>
+                            <span class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</span>
+                        </p>
+                        <br>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
+                    </div>
                 </div>
             </div>
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-2.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Scaffolding</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-2.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">Scaffolding</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
+                    </div>
                 </div>
             </div>
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-3.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Politcarbonate Sheet</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-3.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">Politcarbonate Sheet</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
+                    </div>
                 </div>
             </div>    
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-4.png" alt="">
-                    <p class="bold green-text px-2 pt-1">uPVC</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-4.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">uPVC</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                         
+                    </div>
                 </div>
             </div>
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-5.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Gypsum/Cement Board</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-5.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">Gypsum/Cement Board</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
+                    </div>
                 </div>
             </div>     
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-6.png" alt="">
-                    <p class="bold green-text px-2 pt-1">PVC Flooring</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-6.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">PVC Flooring</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                         
+                    </div>
                 </div>
             </div>
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-7.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Mixer</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-7.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">Mixer</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
+                    </div>
                 </div>
             </div>  
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-8.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Stone Wool</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-8.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">Stone Wool</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
+                    </div>
                 </div>
             </div>
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-9.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Glass Wool</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-9.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">Glass Wool</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
+                    </div>
                 </div>
             </div> 
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-10.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Scaffolding</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-10.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">Scaffolding</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
+                    </div>
                 </div>
             </div> 
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-11.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Expanded Polystrene</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-11.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">Expanded Polystrene</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                         
+                    </div>
                 </div>
             </div> 
-            <div class="product-card col-md-4 mt-2">
+            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
                 <div class="product-inner white-bg ">
-                    <img class="w-100" src="assets/images/product-img-12.png" alt="">
-                    <p class="bold green-text px-2 pt-1">Pergola</p>
-                    <p class="regular px-2 pt-0-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
-                    <a class="bold d-block green-text text-right px-2 pt-0-5 pb-1" href="">Read More <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>  
+                    <img class="w-100 d-block" src="assets/images/product-img-12.png" alt="">
+                    <div class="p-3">
+                        <p class="bold green-text">Pergola</p>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
+                    </div>
                 </div>
             </div> 
-            <a class="d-block d-md-none dark-bg white-text bold p-1-5 m-auto my-3" href="">SHOW MORE</a>            
+            <a class="d-inline-block d-lg-none position-relative dark-bg white-text bold py-1 px-1-5 m-auto my-3" href=""><p class="mr-1-5">SHOW MORE</p></a>         
         </div>
 
     </section>
@@ -248,8 +294,6 @@
     <!-- footer ends -->
   
 
-    <script src="assets/js/flickity.js"></script> <!-- flickity js source -->
-
     <script>
 
         /* navbar toggle starts */
@@ -261,23 +305,6 @@
             hamburgerBtn.classList.toggle('open');
         }
         /* navbar toggle ends */
-
-        /* flickity for slider starts */
-
-        var elem = document.querySelector('.main-carousel');
-        var flkty = new Flickity( elem, {
-        // options
-        cellAlign: 'left',
-        contain: true
-        });
-
-        // element argument can be a selector string
-        //   for an individual element
-        var flkty = new Flickity( '.main-carousel', {
-        // options
-        });
-
-        /* flickity for slider ends */
 
 
     </script>

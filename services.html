@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeta Design - Services</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <style>
+
+    /* mobile view starts */
+
+    #services-section {
+        padding-bottom: 100px;
+    }
+
+    #services-section h2:first-of-type {
+        font-size: 40px;
+    }
+    
+    .service-top-left {
+        top: 1rem;
+        left: 2rem;
+        width: 1rem;
+        z-index: 97;
+    }
+
+    .service-top-inner::after {
+        height: 1px;
+        width: 100%;
+        content: "";
+        position: absolute;
+        top: 50%;
+        background-color: var(--green);
+        z-index: 98;
+        left: 0;
+    }
+
+    #services-section img {
+        width: 14px;
+    }
+
+    #services-section > .container h2 {
+        font-size: 36px;
+    }
+    
+ 
+
+    /* mobile view ends */
+
+    /* desktop view starts */
+    @media (min-width: 576px) {
+        #services-section > p:first-child, h2 {
+            margin-left: 0;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .service-top-left {
+            top: 2rem;
+            left: 2rem;
+        }
+
+        #services-section > .container h2 {
+            font-size: 40px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        #services-section {
+            padding-bottom: 160px;
+        }
+  
+    }
+    
+
+    /* desktop view ends */
+
+
+
+    </style>
+
+</head>
+<body>
+    <!-- navigation starts -->
+    <nav class="d-flex align-items-center position-fixed w-100 top-0 white-bg">
+        <div class="container d-flex flex-row justify-content-between align-items-center">
+            <a href="index.html"><img src="assets/images/cropped-zetadesign-navbar-logo.svg" alt=""></a>
+            <div class="nav-list w-lg-auto w-100 py-lg-0 py-3 position-lg-static position-absolute white-lg-bg green-bg dark-lg-text white-text left-0">
+                <ul class="d-flex flex-lg-row flex-column py-lg-0 py-3 text-center bold">
+                    <li class="py-lg-0 py-2 position-relative selected"><a href="products.html">Products</a></li>
+                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="services.html">Services</a></li>
+                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="references.html">References</a></li>
+                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="nav-phone-info d-lg-none d-flex position-absolute align-items-center py-3 left-50">
+                    <img src="assets/icons/phone-navbar.svg"></img>
+                    <p class="d-lg-none regular pl-0-5 text-white">+256 706 311 781</p>     
+                </div>                
+            </div>  
+            <div class="nav-button d-none d-lg-block"><a href="contact.html#contact-wrapper" class="main-text bold">LET'S HAVE A TALK</a></div>
+            <div class="nav-toggle-btn d-lg-none">
+                <button class="hamburger-menu-btn d-flex d-lg-none" onclick="navToggle()">
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                    <span class="hamburger-menu-line position-absolute green-bg"></span>
+                  </button>
+            </div>
+        </div>
+        
+    </nav>
+    <!-- navigation ends -->
+
+    <!-- services section starts -->
+    <section class="green-bg pt-lg-5 pt-4" id="services-section">
+
+        <div class="container">
+            <p class="bold dark-text text-left text-lg-center">ALL OF THEM</p>
+            <h2 class="white-text text-left text-lg-center pb-lg-5 pb-3">SERVICES</h2>            
+        </div>
+
+
+        <div class="container row mx-auto mb-lg-4 mb-2 px-1 px-lg-0 position-relative">
+            <div class="service-top-left position-absolute">
+                <div class="service-top-inner">
+                    <span class="black white-text text-center d-flex flex-column position-relative">
+                        <label>0</label>  
+                        <label>1</label>  
+                    </span>                        
+                </div>
+
+            </div>            
+            <div class="col-lg-6 dark-bg p-1-5 d-flex justify-content-center align-items-center flex-column ">
+
+                <div class="p-4">
+                    <h2 class="green-text">design</h2>
+                    <h2 class="white-text">design</h2>
+                    <h2 class="grey-text">design</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 white-bg py-5 px-4 regular">
+                <p class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsa enim perferendis veniam aut! Eum sunt quaerat doloribus fugiat consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsa enim perferendis veniam aut! Eum sunt quaerat doloribus fugiat consequatur.</p>
+                <ul class="mt-2">
+                    <li><p class="white-text bold green-text">Guaranteed</p></li>
+                    <li class="pt-1 d-flex align-items-center"><img src="assets/icons/optionlist-icon-1.svg" alt=""><p class="d-inline-block pl-0-5">Creativity</p></li>
+                    <li class="pt-1 d-flex align-items-center"><img src="assets/icons/optionlist-icon-2.svg" alt=""><p class="d-inline-block pl-0-5">Innovation</p></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="container row mx-auto mb-lg-4 mb-2 px-1 px-lg-0 position-relative">
+            <div class="service-top-left position-absolute">
+                <div class="service-top-inner">
+                    <span class="black white-text text-center d-flex flex-column position-relative">
+                        <label>0</label>  
+                        <label>2</label>  
+                    </span>                        
+                </div>
+
+            </div>            
+            <div class="col-lg-6 dark-bg p-1-5 d-flex justify-content-center align-items-center flex-column ">
+
+                <div class="p-4">
+                    <h2 class="green-text">trade</h2>
+                    <h2 class="white-text">trade</h2>
+                    <h2 class="grey-text">trade</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 white-bg py-5 px-4 regular">
+                <p class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsa enim perferendis veniam aut! Eum sunt quaerat doloribus fugiat consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsa enim perferendis veniam aut! Eum sunt quaerat doloribus fugiat consequatur.</p>
+                <ul class="mt-2">
+                    <li><p class="white-text bold green-text">Guaranteed</p></li>
+                    <li class="pt-1 d-flex align-items-center"><img src="assets/icons/optionlist-icon-3.svg" alt=""><p class="d-inline-block pl-0-5">Customer Satisfaction</p></li>
+                    <li class="pt-1 d-flex align-items-center"><img src="assets/icons/optionlist-icon-4.svg" alt=""><p class="d-inline-block pl-0-5">High Quality</p></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="container row mx-auto mb-lg-4 mb-2 px-1 px-lg-0 position-relative">
+            <div class="service-top-left position-absolute">
+                <div class="service-top-inner">
+                    <span class="black white-text text-center d-flex flex-column position-relative">
+                        <label>0</label>  
+                        <label>3</label>  
+                    </span>                        
+                </div>
+
+            </div>            
+            <div class="col-lg-6 dark-bg p-1-5 d-flex justify-content-center align-items-center flex-column ">
+
+                <div class="p-4">
+                    <h2 class="green-text">fabrication</h2>
+                    <h2 class="white-text">fabrication</h2>
+                    <h2 class="grey-text">fabrication</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 white-bg py-5 px-4 regular">
+                <p class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsa enim perferendis veniam aut! Eum sunt quaerat doloribus fugiat consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsa enim perferendis veniam aut! Eum sunt quaerat doloribus fugiat consequatur.</p>
+                <ul class="mt-2">
+                    <li><p class="white-text bold green-text">Guaranteed</p></li>
+                    <li class="pt-1 d-flex align-items-center"><img src="assets/icons/optionlist-icon-5.svg" alt=""><p class="d-inline-block pl-0-5">Cost Effective</p></li>
+                    <li class="pt-1 d-flex align-items-center"><img src="assets/icons/optionlist-icon-6.svg" alt=""><p class="d-inline-block pl-0-5">Warranty</p></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- services section ends -->
+
+    <!-- footer starts -->
+    <footer class="white-text dark-bg pt-2 pb-1 regular">
+        <div class="container row m-auto">
+            <div class="col-md-6 p-0">
+                    <ul>
+                        <li class="pt-1">
+                            <img src="assets/icons/footer-logo.svg" alt="">                     
+                        </li>
+                        <li class="pt-1">
+                            <p><a href="">Privacy Terms</a></p>
+                        </li>
+                        <li class="pt-1">
+                            <p><a href="">About Us</a></p>
+                        </li>
+                        <li class="pt-1 d-md-none">
+                            <p><a  href="">Contact Us</a></p>
+                            
+                        </li>
+                    </ul>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <ul class="ml-5 mt-1">
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-mail-icon.svg" alt=""><p class="pl-1">zetadesignsltd@gmail.com</p></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-phone-icon.svg" alt=""><p class="pl-1">+256 706 311 781</p></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-loc-icon.svg" alt=""><p class="pl-1">Plot 7/8 2nd Street Industrial Area Kampala/Uganda</p></li>
+                </ul>
+            </div>  
+            <p class="w-100 pt-4 text-center">Copyrights reserved by Perfist inc.</p> 
+        </div>
+
+    </footer>
+    <!-- footer ends -->
+  
+
+    <script>
+
+        /* navbar toggle starts */
+        function navToggle () {
+            var navbar = document.querySelector('.nav-list');
+            navbar.classList.toggle('nav-slide');
+
+            var hamburgerBtn = document.querySelector('.hamburger-menu-btn');
+            hamburgerBtn.classList.toggle('open');
+        }
+        /* navbar toggle ends */
+
+
+
+    </script>
+    
+</body>
+</html>
+
+

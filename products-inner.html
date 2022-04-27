@@ -14,11 +14,12 @@
 
     #product-section img {
         object-fit: cover;
+        height: 25vh;
     }
 
     #product-section h1 {
         transform: translateX(-50%);
-        font-size: 16px;
+        font-size: 40px;
         top: 25%;
     }
 
@@ -42,13 +43,12 @@
 
     #specifications-title {
         font-size: 10vw;
+        line-height: 34px;
     }
     
 
     @media (min-width: 576px){
-        #product-section h1 {
-            font-size: 24px;
-        }
+        
         #product-section > .container {
             margin-top:-70px;
         }
@@ -58,8 +58,12 @@
     }
         
     @media (min-width: 768px){
+        #product-section img {
+            height: 100%;
+        }
+        
         #product-section h1 {
-        font-size: 32px;
+        font-size: 36px;
         }
         #product-section > .container {
         margin-top:-100px;
@@ -69,16 +73,16 @@
         }
     } 
     
- 
 
     /* mobile view ends */
 
     /* desktop view starts */
 
     @media (min-width: 992px){
+
         #product-section h1 {
             font-size: 48px;
-            top: 35%;
+            top: 30%;
         }
 
         #specifications-main {
@@ -110,6 +114,7 @@
             right: 0;
             font-size: 50px;
             display: block;
+            line-height: inherit;
         }
 
         #product-section:nth-child(2) {
@@ -148,20 +153,20 @@
     <!-- navigation starts -->
     <nav class="d-flex align-items-center position-fixed w-100 top-0 white-bg">
         <div class="container d-flex flex-row justify-content-between align-items-center">
-            <img src="assets/images/cropped-zetadesign-navbar-logo.svg" alt="">
+            <a href="index.html"><img src="assets/images/cropped-zetadesign-navbar-logo.svg" alt=""></a>
             <div class="nav-list w-lg-auto w-100 py-lg-0 py-3 position-lg-static position-absolute white-lg-bg green-bg dark-lg-text white-text left-0">
                 <ul class="d-flex flex-lg-row flex-column py-lg-0 py-3 text-center bold">
-                    <li class="py-lg-0 py-1 position-relative selected"><a href="index.html">Products</a></li>
-                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">Services</a></li>
-                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">References</a></li>
-                    <li class="py-lg-0 py-1 ml-lg-3-5 position-relative"><a href="">Contact Us</a></li>
+                    <li class="py-lg-0 py-2 position-relative selected"><a href="products.html">Products</a></li>
+                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="services.html">Services</a></li>
+                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="references.html">References</a></li>
+                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="contact.html">Contact Us</a></li>
                 </ul>
                 <div class="nav-phone-info d-lg-none d-flex position-absolute align-items-center py-3 left-50">
                     <img src="assets/icons/phone-navbar.svg"></img>
-                    <p class="d-lg-none pl-0-5 text-white">+256 706 311 781</p>     
+                    <p class="d-lg-none regular pl-0-5 text-white">+256 706 311 781</p>     
                 </div>                
             </div>  
-            <div class="nav-button d-none d-lg-block"><a href="" class="dark-text bold">LET'S HAVE A TALK</a></div>
+            <div class="nav-button d-none d-lg-block"><a href="contact.html#contact-wrapper" class="main-text bold">LET'S HAVE A TALK</a></div>
             <div class="nav-toggle-btn d-lg-none">
                 <button class="hamburger-menu-btn d-flex d-lg-none" onclick="navToggle()">
                     <span class="hamburger-menu-line position-absolute green-bg"></span>
@@ -177,15 +182,15 @@
     <!-- product inner starts -->
     <section class="green-bg" id="product-section">
         <div class="position-relative">
-            <img class="w-100 h-100 d-block" src="assets/images/product-section-top.png" alt="">
-            <h1 class="black white-text position-absolute left-50">ROOFING <span CLASS="green-text">SHEET</span></h1>              
+            <img class="w-100 d-block" src="assets/images/product-section-top.png" alt="">
+            <h1 class="w-100 text-center black white-text position-absolute left-50">ROOFING <span CLASS="green-text">SHEET</span></h1>              
         </div>
        
         <div class="container position-relative">
             
             <img class="w-100 d-block" src="assets/images/overview.png" alt="">
             <div class="white-bg regular p-2-5">
-                <p class="bold green-text pb-1-5">Overview</p>
+                <p class="bold green-text text-center text-lg-left pb-1-5">Overview</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio laborum ipsa fuga sed consequatur obcaecati odio veritatis blanditiis animi aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint tenetur expedita consectetur sunt reprehenderit sapiente eveniet accusamus nostrum at fuga. </p>
             </div>
             <div class="container row p-0 m-0">
@@ -194,12 +199,12 @@
                 </div>
                 <div class="col-lg-7 p-0 position-relative">
                     <div class="dark-bg white-text bold position-relative d-flex align-items-center flex-column-reverse flex-lg-row" id="specifications-main">
-                        <ul class="w-100 pl-0 pl-lg-5 py-3 py-lg-0 text-center text-lg-left">
+                        <ul class="w-100 pl-0 pl-lg-5 py-3 py-lg-0 pr-2 text-center text-lg-left">
                             <li class="position-relative py-1"><p>Width: 97cm</p></li>
                             <li class="position-relative py-1"><p>Length: 200cm</p></li>
                             <li class="position-relative py-1"><p>Coverage Per Sheet: 1.63m2/Sheet</p></li>
                             <li class="position-relative py-1"><p>Weight: 6,5 kg</p></li>
-                            <li class="position-relative py-1"><p>Corrugation Height:3,8cm</p></li>
+                            <li class="position-relative py-1"><p>Corrugation Height: 3,8cm</p></li>
                             <li class="position-relative py-1"><p>Number Of Corrugation Per Sheet: 10 Per Sheet</p></li>
                         </ul>
                         <h2 class="position-lg-absolute position-static black white-text" id="specifications-title">SPECIFICATIONS</h2>
@@ -266,8 +271,6 @@
     <!-- footer ends -->
   
 
-    <script src="assets/js/flickity.js"></script> <!-- flickity js source -->
-
     <script>
 
         /* navbar toggle starts */
@@ -279,23 +282,6 @@
             hamburgerBtn.classList.toggle('open');
         }
         /* navbar toggle ends */
-
-        /* flickity for slider starts */
-
-        var elem = document.querySelector('.main-carousel');
-        var flkty = new Flickity( elem, {
-        // options
-        cellAlign: 'left',
-        contain: true
-        });
-
-        // element argument can be a selector string
-        //   for an individual element
-        var flkty = new Flickity( '.main-carousel', {
-        // options
-        });
-
-        /* flickity for slider ends */
 
 
     </script>

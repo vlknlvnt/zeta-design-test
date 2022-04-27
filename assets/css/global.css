@@ -3,6 +3,7 @@
     --green-dark: #70FC7F73;
     --green-light: #8DFB99;
     --text-main: #456278;
+    --text-grey: #676767;
     --bg-grey: #E5E5E5;
     --bg-white: white;
     --nav-height: 90px;
@@ -22,14 +23,20 @@
 .grey-bg {
     background-color: var(--bg-grey);
 }
-.dark-text {
+.main-text {
     color: var(--text-main);
+}
+.dark-text {
+    color: black;
 }
 .white-text {
     color: white;
 }
 .green-text {
     color: var(--green)
+}
+.grey-text {
+    color: var(--text-grey)
 }
 /* colors for mobile view ends */
 
@@ -92,7 +99,7 @@ nav {
     }
 
     .nav-phone-info {
-        bottom: 3rem;
+        bottom: 1rem;
         transform: translateX(-50%);
     }
 
@@ -179,7 +186,6 @@ nav img {
 .nav-list {
     color: var(--text-main);
     font-size: 18px;
-    line-height: 22px;
 }
 
 .nav-list ul li::before {
@@ -209,7 +215,6 @@ nav img {
 
 .nav-button a {
     font-size: 15px;
-    line-height: 18px;
     border: 4px solid var(--green);
     border-radius: 30px;
     padding: 13px 16px;
