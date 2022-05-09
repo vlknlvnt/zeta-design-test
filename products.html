@@ -21,10 +21,6 @@
         font-size: 40px;
     }    
 
-    #products-section > .container:first-child > p, #products-section > .container:first-child > h3 {
-        padding-left: 15px;
-    }
-
     #products-section > .container:last-child > a {
         border-radius: 35px;
         transition: var(--transition);
@@ -56,25 +52,24 @@
 
 
     .product-inner > img {
-        height: 450px;
+        height: 25rem;
         object-fit: cover;
         filter: saturate(0);
-        transition: var(--transition);
+        transition: 0.5s;
+    }
+
+    .product-inner > div > p {
+        color: rgba(0,0,0,0.5);
     }
 
     .product-inner > div > a {
-        width: 140px;
+        width: 8.75rem;
     }
 
     .product-inner:hover img {
         filter: saturate(1);
     }
 
-    @media (min-width: 768px) {
-        #products-section > .container:last-child {
-            padding-bottom: 160px;
-        }
-    }
     /* products section ends */
 
     /* mobile view ends */
@@ -109,7 +104,7 @@
                     <p class="d-lg-none regular pl-0-5 text-white">+256 706 311 781</p>     
                 </div>                
             </div>  
-            <div class="nav-button d-none d-lg-block"><a href="contact.html#contact-wrapper" class="main-text bold">LET'S HAVE A TALK</a></div>
+            <div class="nav-button d-none d-lg-block"><a href="contact.html#contact-wrapper" class="main-text bold button-main">LET'S HAVE A TALK</a></div>
             <div class="nav-toggle-btn d-lg-none">
                 <button class="hamburger-menu-btn d-flex d-lg-none" onclick="navToggle()">
                     <span class="hamburger-menu-line position-absolute green-bg"></span>
@@ -123,7 +118,7 @@
     <!-- navigation ends -->
 
     <!-- products starts -->
-    <section class="products-section pt-lg-5 pt-4" id="products-section">
+    <section class="py-lg-5 py-2" id="products-section">
 
         <div class="container px-lg-0">
             <p class="bold dark-text text-left text-lg-center pl-0">OUR PROVIDED</p>
@@ -132,123 +127,121 @@
             <p class="regular white-text">Lorem ipsum dolor sit.</p>            
         </div>
         <div class="row container mx-auto px-0">
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg">
                     <img class="w-100 d-block" src="assets/images/product-img-1.png" alt="">
                     <div class="p-3">
-                        <p><span class="bold green-text">Roofing Sheet</span><br><br>
-                            <span class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</span>
-                        </p>
-                        <br>
-                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
-                    </div>
-                </div>
-            </div>
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
-                <div class="product-inner white-bg ">
-                    <img class="w-100 d-block" src="assets/images/product-img-2.png" alt="">
-                    <div class="p-3">
-                        <p class="bold green-text">Scaffolding</p>
+                        <h3 class="bold green-text">Roofing Sheet</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
                     </div>
                 </div>
             </div>
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
+                <div class="product-inner white-bg ">
+                    <img class="w-100 d-block" src="assets/images/product-img-2.png" alt="">
+                    <div class="p-3">
+                        <h3 class="bold green-text">Scaffolding</h3>
+                        <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
+                        <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
+                    </div>
+                </div>
+            </div>
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg ">
                     <img class="w-100 d-block" src="assets/images/product-img-3.png" alt="">
                     <div class="p-3">
-                        <p class="bold green-text">Politcarbonate Sheet</p>
+                        <h3 class="bold green-text">Politcarbonate Sheet</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
                     </div>
                 </div>
             </div>    
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg ">
                     <img class="w-100 d-block" src="assets/images/product-img-4.png" alt="">
                     <div class="p-3">
-                        <p class="bold green-text">uPVC</p>
+                        <h3 class="bold green-text">uPVC</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                         
                     </div>
                 </div>
             </div>
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg ">
                     <img class="w-100 d-block" src="assets/images/product-img-5.png" alt="">
                     <div class="p-3">
-                        <p class="bold green-text">Gypsum/Cement Board</p>
+                        <h3 class="bold green-text">Gypsum/Cement Board</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
                     </div>
                 </div>
             </div>     
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg ">
                     <img class="w-100 d-block" src="assets/images/product-img-6.png" alt="">
                     <div class="p-3">
-                        <p class="bold green-text">PVC Flooring</p>
+                        <h3 class="bold green-text">PVC Flooring</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                         
                     </div>
                 </div>
             </div>
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg ">
                     <img class="w-100 d-block" src="assets/images/product-img-7.png" alt="">
                     <div class="p-3">
-                        <p class="bold green-text">Mixer</p>
+                        <h3 class="bold green-text">Mixer</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
                     </div>
                 </div>
             </div>  
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg ">
                     <img class="w-100 d-block" src="assets/images/product-img-8.png" alt="">
                     <div class="p-3">
-                        <p class="bold green-text">Stone Wool</p>
+                        <h3 class="bold green-text">Stone Wool</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
                     </div>
                 </div>
             </div>
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg ">
                     <img class="w-100 d-block" src="assets/images/product-img-9.png" alt="">
                     <div class="p-3">
-                        <p class="bold green-text">Glass Wool</p>
+                        <h3 class="bold green-text">Glass Wool</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
                     </div>
                 </div>
             </div> 
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg ">
                     <img class="w-100 d-block" src="assets/images/product-img-10.png" alt="">
                     <div class="p-3">
-                        <p class="bold green-text">Scaffolding</p>
+                        <h3 class="bold green-text">Scaffolding</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
                     </div>
                 </div>
             </div> 
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg ">
                     <img class="w-100 d-block" src="assets/images/product-img-11.png" alt="">
                     <div class="p-3">
-                        <p class="bold green-text">Expanded Polystrene</p>
+                        <h3 class="bold green-text">Expanded Polystrene</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                         
                     </div>
                 </div>
             </div> 
-            <div class="product-card col-lg-4 mt-2 px-0 px-md-1">
+            <div class="product-card col-lg-4 my-1 px-1">
                 <div class="product-inner white-bg ">
                     <img class="w-100 d-block" src="assets/images/product-img-12.png" alt="">
                     <div class="p-3">
-                        <p class="bold green-text">Pergola</p>
+                        <h3 class="bold green-text">Pergola</h3>
                         <p class="regular py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta?</p>
                         <a class="bold d-flex flex-row green-text text-right ml-auto" href=""><p class="pr-1">Read More</p> <img src="assets/icons/products-readmore-icon.svg" alt=""> </a>                          
                     </div>
@@ -274,7 +267,7 @@
                         <li class="pt-1">
                             <p><a href="">About Us</a></p>
                         </li>
-                        <li class="pt-1 d-md-none">
+                        <li class="pt-1" id="contactus-footer">
                             <p><a  href="">Contact Us</a></p>
                             
                         </li>
@@ -287,7 +280,7 @@
                     <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-loc-icon.svg" alt=""><p class="pl-1">Plot 7/8 2nd Street Industrial Area Kampala/Uganda</p></li>
                 </ul>
             </div>  
-            <p class="w-100 pt-4 text-center">Copyrights reserved by Perfist inc.</p> 
+            <p class="w-100 pt-4 text-center">Copyrights reserved by Zeta Design</p> 
         </div>
 
     </footer>

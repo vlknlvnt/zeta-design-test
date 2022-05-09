@@ -40,6 +40,16 @@
 }
 /* colors for mobile view ends */
 
+/* class for button*/
+.button-main {
+    font-size: 15px;
+    border: 4px solid var(--green);
+    border-radius: 30px;
+    padding: 13px 16px;
+    transition: var(--transition);
+}
+/* class for button*/
+
 /* colors for desktop view starts */
 @media (min-width: 992px) {
     .green-lg-bg {
@@ -169,6 +179,10 @@ nav {
     footer > .container > p {
         font-size: 12px;
     }
+
+    #contactus-footer {
+        display: block;
+    }
     /* footer ends */
 
 /* mobile view ends */
@@ -213,14 +227,6 @@ nav img {
     transition: var(--transition);
 }
 
-.nav-button a {
-    font-size: 15px;
-    border: 4px solid var(--green);
-    border-radius: 30px;
-    padding: 13px 16px;
-    transition: var(--transition)
-}
-
 .nav-button a:hover {
     background-color: var(--green);
     color: white;
@@ -245,6 +251,9 @@ footer ul + ul:last-child li img {
     width: 14px;
 }
 
+#contactus-footer {
+    display: none;
+}
 
 /* footer ends  */
 

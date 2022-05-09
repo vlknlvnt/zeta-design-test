@@ -15,7 +15,7 @@
         /* slider section starts */
 
         .slider-inner-row {
-            height: 400px;
+            height: 25rem;
             top: 50%;
             transform: translateY(-50%);
             gap: 0;
@@ -25,16 +25,8 @@
             font-size: 26px;
         }
 
-        .slider-section, .carousel-cell {
+        #slider-section, .carousel-cell {
             font-size: 30px;
-        }
-
-        .slider-discover-btn {
-            font-size: 15px;
-            border: 4px solid var(--green);
-            border-radius: 30px;
-            padding: 13px 16px;
-            transition: var(--transition)
         }
 
         .slider-discover-btn:hover {
@@ -42,8 +34,9 @@
             color: white;
         }
 
-        .slider-section img {
-            height: 430px;
+        #slider-section img {
+            min-height: 27.5rem;
+            max-height: 55rem;
             object-fit: cover;    
             border-radius: 25px;        
         }  
@@ -73,15 +66,8 @@
 
 
         /* options section starts */
-        .options-section a {
-            font-size: 15px;
-            border: 4px solid var(--green);
-            border-radius: 30px;
-            padding: 13px 16px;
-            transition: var(--transition);
-        }
 
-        .options-section a:hover {
+        #options-section a:hover {
             background-color: var(--green);
         }
 
@@ -109,15 +95,15 @@
             font-size: 14px;
         }
 
-        .options-section img {
+        #options-section img {
             width: 12px;
         }   
         
-        .options-section > .row {
+        #options-section > .row {
             gap: 3rem;
         }  
         
-        .options-section > .row > div {
+        #options-section > .row > div {
             margin: 0 15px;
         }  
 
@@ -140,11 +126,6 @@
 
 
         /* summary section starts */
-        #summary-section {
-            padding-top: 160px;
-            padding-bottom: 160px;
-        }  
-
         #summary-section > .row {
             gap: 86px;
         }
@@ -160,39 +141,32 @@
             border-radius: 25px;
         }
         
-        .summary-section > div > div > div {
+        #summary-section > div > div > div {
             border: 3px var(--green-light) solid;
             border-radius: 30px;
             font-size: 1.2rem;
         }
 
+        .counter {
+            font-size: 26px;
+        }
+
         /* summary section ends */
 
         /* clients section starts */
-        .clients-section h2 {
-            font-size: 32px;
+        #clients-section h2 {
+            font-size: 40px;
         }
 
-        .clients-section a {
-            font-size: 15px;
-            border: 4px solid var(--green);
-            border-radius: 30px;
-            padding: 13px 16px;
-            transition: var(--transition);
-        }
-
-        .clients-section a:hover {
+        #clients-section a:hover {
             color: white;
             background-color: var(--green);
         }
 
-        .clients-wrapper {
-            margin: 100px 0;
-        }
-
         .clients-carousel-cell {
-            height: 106px;
+            height: 150px;
             border-radius: 25px;
+            padding: 0 48px;
         }
 
         .clients-cell-inner {
@@ -205,7 +179,14 @@
         }
 
         .clients-cell-inner > img {
-            width: 50px;
+            width: 100%;
+            height: 100px;
+            filter: saturate(0);
+            transition: var(--transition);
+        }
+
+        .clients-cell-inner:hover > img {
+            filter: saturate(1);
         }
         /* clients section ends */
 
@@ -213,16 +194,24 @@
 
         iframe {
             width: 100%;
-            min-height: 580px;
+            min-height: 400px;
             border: 0;
         }
 
-        iframe, .contact-section > .row > div > div {
+        iframe, #contact-section > .row > div > div {
             border-radius: 20px;
             box-shadow: 0px 0px 5px 3px rgba(229,229,229,1);
         }
 
-        .contact-section h2 {
+        #contact-section > .row > div > div {
+            height: 630px;
+        }
+
+        /*iframe, .contact-section > .row > div + div > .grey-bg {
+            height: 630px;
+        }*/
+
+        #contact-section h2 {
             font-size: 36px;
         }
 
@@ -232,12 +221,22 @@
             padding: 0.5px
         }
 
+        input::placeholder {
+            font-family: 'Montserrat-Regular';
+            color: black;
+            font-size: 1rem;
+        }
+
+        input:focus::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }        
+
         input[type=submit] {
             background-color: var(--green);
             border: none;
             border-radius: 20px;
-            width: 240px;
-            height: 40px;
+            width: 15rem;
+            height: 2.5rem;
             color: white;
             background-image: url('assets/icons/send-icon.svg');
             background-repeat: no-repeat;
@@ -266,10 +265,10 @@
 
         @media (min-width: 576px) {
             .slider-inner-row {
-                height: 300px;
+                height: 18.75rem;
             } 
 
-            .slider-section {
+            #slider-section {
                 font-size: 48px;
             }   
             
@@ -288,22 +287,31 @@
                 left: 82%;
             }
 
+            .clients-carousel-cell:nth-child(1), .clients-carousel-cell:nth-child(2), .clients-carousel-cell:nth-child(3) {
+                margin-bottom: 3rem;
+            }
+
             input[type=submit] {
-                width: 300px;
+                width: 18.75rem;
+            }
+
+            .clients-carousel-cell {
+                padding: 0 10px;
             }
         }
 
         @media (min-width: 992px) {
             /* slider section starts */
-            .slider-section, .carousel-cell {
+            #slider-section, .carousel-cell {
                 width: 100%; 
                 padding: 0; 
                 border-radius: 30px; 
                 font-size: 36px;
             }
 
-            .slider-section img {
-                height: 70vh;     
+            #slider-section img {
+                min-height: 40rem;  
+                max-height: 70vh;   
                 object-fit: cover;
             }
 
@@ -324,20 +332,25 @@
 
             .current-slide {
                 font-size: 36px;
-            }        
+            }      
+
             .current-slide + p {
                 font-size: 16px;
+            }
+
+            .clients-carousel-cell {
+                padding: 0 20px;
             }
         
             /* slider section ends */
 
             /* options section starts */
 
-            .options-section > .row {
+            #options-section > .row {
                 gap: 0;
             }
             
-            .options-section > .row > div {
+            #options-section > .row > div {
                 margin: 0;
             }  
 
@@ -346,7 +359,7 @@
             /* summary section starts */
 
             #summary-section > div:first-child > img {
-                height: 850px;
+                height: 600px;
                 object-fit: cover;
                 border-radius: 0;
             }
@@ -361,12 +374,17 @@
 
             #summary-section > div > div {             
                 left: 50%;
+                top: 50%;
                 transform: translate(-50%, -50%);
             }
 
             /* summary section ends */
 
             /* contact section starts */
+            iframe {
+                min-height: 580px;
+            }
+
             input[type=submit] {
                 width: 100%;
             }
@@ -375,17 +393,27 @@
         }
 
         @media (min-width: 1200px) {
-            .slider-section, .carousel-cell {
+            #slider-section, .carousel-cell {
                 font-size: 30px;
             }
 
             .slider-inner-row {
-                height: 200px;
-                gap: 100px;
+                height: 12.5rem;
+                gap: 6.25rem;
             }
 
             .slider-inner-row > div:first-child {
                 font-size: 40px;
+            }
+
+            .clients-carousel-cell {
+                padding: 0 30px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .clients-carousel-cell {
+                padding: 0 48px;
             }
         }
 
@@ -409,7 +437,7 @@
                     <p class="d-lg-none pl-0-5 regular text-white">+256 706 311 781</p>     
                 </div>                
             </div>  
-            <div class="nav-button d-none d-lg-block"><a href="#contact-section" class="main-text bold">LET'S HAVE A TALK</a></div>
+            <div class="nav-button d-none d-lg-block"><a href="#contact-section" class="main-text bold button-main">LET'S HAVE A TALK</a></div>
             <div class="nav-toggle-btn d-lg-none">
                 <button class="hamburger-menu-btn d-flex d-lg-none" onclick="navToggle()">
                     <span class="hamburger-menu-line position-absolute green-bg"></span>
@@ -423,53 +451,53 @@
     <!-- navigation ends -->
 
     <!-- slider section starts -->
-    <section class="slider-section my-4 py-5 container" id="slider-section">
-            <div class="main-carousel position-relative">
-                <div class="carousel-cell">
-                    <img class="w-100" src="assets/images/slide-img-1.jpg" alt="">
-                    <div class="row slider-inner-row position-absolute bottom-0 w-100 m-0 px-1 px-md-4 justify-content-between justify-content-lg-right align-items-start">
-                        <div class="col-8 col-md-6 col-lg-5 d-md-block d-flex align-items-center justify-content-center flex-column white-text pt-2">
-                            <p class="pb-1-5 d-flex flex-column"><span>Let's build</span><span class="black">your dreams</span><span class="regular">with Zeta Construction</span></p>
-                            <a class="slider-discover-btn bold w-auto mr-auto d-block d-md-inline-block text-center" href="">DISCOVER NOW</a>
-                        </div>
-                        <div class="col-3 pl-4 text-right d-flex align-items-left justify-content-right mt-2 mt-md-0">
-                            <p class="current-slide regular position-relative pl-1 pl-md-4 white-text"><strong>01</strong></p>
-                            <p class="pl-1 pl-md-2 green-text regular"><strong>/03</strong> </p>
-                        </div>                        
+    <section class="py-3 px-1 container" id="slider-section">
+        <div class="main-carousel position-relative">
+            <div class="carousel-cell">
+                <img class="w-100" src="assets/images/slide-img-1.jpg" alt="">
+                <div class="row slider-inner-row position-absolute bottom-0 w-100 m-0 px-1 px-md-4 justify-content-between justify-content-lg-right align-items-start">
+                    <div class="col-8 col-md-6 col-lg-5 d-md-block d-flex align-items-center justify-content-center flex-column white-text pt-2">
+                        <p class="pb-1-5 d-flex flex-column"><span>Let's build</span><span class="black">your dreams</span><span class="regular">with Zeta Construction</span></p>
+                        <a class="slider-discover-btn bold w-auto mr-auto d-block d-md-inline-block text-center button-main" href="">DISCOVER NOW</a>
                     </div>
+                    <div class="col-3 pl-4 text-right d-flex align-items-left justify-content-right mt-2 mt-md-0">
+                        <p class="current-slide regular position-relative pl-1 pl-md-4 white-text"><strong>01</strong></p>
+                        <p class="pl-1 pl-md-2 green-text regular"><strong>/03</strong> </p>
+                    </div>                        
                 </div>
-                <div class="carousel-cell">
-                    <img class="w-100" src="assets/images/slide-img-1.jpg" alt="">
-                    <div class="row slider-inner-row position-absolute bottom-0 w-100 m-0 px-1 px-md-4 justify-content-between justify-content-lg-right align-items-start">
-                        <div class="col-8 col-md-6 col-lg-5 d-md-block d-flex align-items-center justify-content-center flex-column white-text pt-2">
-                            <p class="pb-1-5 d-flex flex-column"><span>Let's build</span><span class="black">your dreams</span><span class="regular">with Zeta Construction</span></p>
-                            <a class="slider-discover-btn bold w-auto mr-auto d-block d-md-inline-block text-center" href="">DISCOVER NOW</a>
-                        </div>
-                        <div class="col-3 pl-4 text-right d-flex align-items-left justify-content-right mt-2 mt-md-0">
-                            <p class="current-slide regular position-relative pl-1 pl-md-4 white-text"><strong>01</strong></p>
-                            <p class="pl-1 pl-md-2 green-text regular"><strong>/03</strong> </p>
-                        </div>                        
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <img class="w-100" src="assets/images/slide-img-1.jpg" alt="">
-                    <div class="row slider-inner-row position-absolute bottom-0 w-100 m-0 px-1 px-md-4 justify-content-between justify-content-lg-right align-items-start">
-                        <div class="col-8 col-md-6 col-lg-5 d-md-block d-flex align-items-center justify-content-center flex-column white-text pt-2">
-                            <p class="pb-1-5 d-flex flex-column"><span>Let's build</span><span class="black">your dreams</span><span class="regular">with Zeta Construction</span></p>
-                            <a class="slider-discover-btn bold w-auto mr-auto d-block d-md-inline-block text-center" href="">DISCOVER NOW</a>
-                        </div>
-                        <div class="col-3 pl-4 text-right d-flex align-items-left justify-content-right mt-2 mt-md-0">
-                            <p class="current-slide regular position-relative pl-1 pl-md-4 white-text"><strong>01</strong></p>
-                            <p class="pl-1 pl-md-2 green-text regular"><strong>/03</strong> </p>
-                        </div>                        
-                    </div>
-                </div>                
             </div>
+            <div class="carousel-cell">
+                <img class="w-100" src="assets/images/slide-img-1.jpg" alt="">
+                <div class="row slider-inner-row position-absolute bottom-0 w-100 m-0 px-1 px-md-4 justify-content-between justify-content-lg-right align-items-start">
+                    <div class="col-8 col-md-6 col-lg-5 d-md-block d-flex align-items-center justify-content-center flex-column white-text pt-2">
+                        <p class="pb-1-5 d-flex flex-column"><span>Let's build</span><span class="black">your dreams</span><span class="regular">with Zeta Construction</span></p>
+                        <a class="slider-discover-btn bold w-auto mr-auto d-block d-md-inline-block text-center button-main" href="">DISCOVER NOW</a>
+                    </div>
+                    <div class="col-3 pl-4 text-right d-flex align-items-left justify-content-right mt-2 mt-md-0">
+                        <p class="current-slide regular position-relative pl-1 pl-md-4 white-text"><strong>02</strong></p>
+                        <p class="pl-1 pl-md-2 green-text regular"><strong>/03</strong> </p>
+                    </div>                        
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <img class="w-100" src="assets/images/slide-img-1.jpg" alt="">
+                <div class="row slider-inner-row position-absolute bottom-0 w-100 m-0 px-1 px-md-4 justify-content-between justify-content-lg-right align-items-start">
+                    <div class="col-8 col-md-6 col-lg-5 d-md-block d-flex align-items-center justify-content-center flex-column white-text pt-2">
+                        <p class="pb-1-5 d-flex flex-column"><span>Let's build</span><span class="black">your dreams</span><span class="regular">with Zeta Construction</span></p>
+                        <a class="slider-discover-btn bold w-auto mr-auto d-block d-md-inline-block text-center button-main" href="">DISCOVER NOW</a>
+                    </div>
+                    <div class="col-3 pl-4 text-right d-flex align-items-left justify-content-right mt-2 mt-md-0">
+                        <p class="current-slide regular position-relative pl-1 pl-md-4 white-text"><strong>03</strong></p>
+                        <p class="pl-1 pl-md-2 green-text regular"><strong>/03</strong> </p>
+                    </div>                        
+                </div>
+            </div>                
+        </div>
     </section>
     <!-- slider section ends -->
 
     <!-- options section start -->
-    <section class="options-section container" id="options-section">
+    <section class="container" id="options-section">
         <div class="row">
             <div class="col-lg-4 px-0 px-lg-1">
                 <div class="dark-bg p-2-5 h-auto">
@@ -477,13 +505,13 @@
                     <label>0</label>  
                     <label>1</label>  
                 </span>
-                <div class="p-1-5 mx-auto mt-3 mb-3">
+                <div class="p-1-5 mx-auto my-1 my-lg-3">
                     <img src="assets/icons/options-icon-1.svg" alt="">                    
                 </div>
                 <p class="option-title pb-1 text-center regular white-text">DESIGN</p>
                 <p class="option-text regular white-text pb-1 pl-lg-1 pl-0">Lorem ipsum dolor sit amet, consec dolor sit amet, consec tetur adipiscin elit.</p>
-                <a class="my-2 ml-1 white-text d-inline-block bold" href=""><p>Learn More</p></a>
-                <ul class="mt-5 mb-4 ml-1">
+                <a class="my-0-5 my-lg-2 ml-1 white-text d-inline-block bold button-main" href=""><p>Learn More</p></a>
+                <ul class="my-2 my-lg-4 ml-1">
                     <li><p class="white-text bold green-text">Guaranteed</p></li>
                     <li class="pt-1"><img src="assets/icons/optionlist-icon-1.svg" alt=""><p class="white-text d-inline-block pl-0-5">Creativity</p></li>
                     <li class="pt-1"><img src="assets/icons/optionlist-icon-2.svg" alt=""><p class="white-text d-inline-block pl-0-5">Innovation</p></li>
@@ -496,13 +524,13 @@
                     <label>0</label>  
                     <label>2</label>  
                 </span>
-                <div class="p-1-5 mx-auto mt-3 mb-3">
+                <div class="p-1-5 mx-auto my-1 my-lg-3">
                     <img src="assets/icons/options-icon-2.svg" alt="">                    
                 </div>
                 <p class="option-title pb-1 text-center regular white-text">TRADE</p>
                 <p class="option-text regular white-text pb-1 pl-lg-1 pl-0">Lorem ipsum dolor sit amet, consec dolor sit amet, consec tetur adipiscin elit.</p>
-                <a class="my-2 ml-1 white-text d-inline-block bold" href=""><p>Learn More</p></a>
-                <ul class="mt-5 mb-4 ml-1">
+                <a class="my-0-5 my-lg-2 ml-1 white-text d-inline-block bold button-main" href=""><p>Learn More</p></a>
+                <ul class="my-2 my-lg-4 ml-1">
                     <li><p class="white-text bold green-text">Guaranteed</p></li>
                     <li class="pt-1"><img src="assets/icons/optionlist-icon-3.svg" alt=""><p class="white-text d-inline-block pl-0-5">Customer Satisfaction</p></li>
                     <li class="pt-1"><img src="assets/icons/optionlist-icon-4.svg" alt=""><p class="white-text d-inline-block pl-0-5">High Quality</p></li>
@@ -515,13 +543,13 @@
                     <label>0</label>  
                     <label>3</label>  
                 </span>
-                <div class="p-1-5 mx-auto mt-3 mb-3">
+                <div class="p-1-5 mx-auto my-1 my-lg-3">
                     <img src="assets/icons/options-icon-3.svg" alt="">                    
                 </div>
                 <p class="option-title pb-1 text-center regular white-text">FABRICATION</p>
                 <p class="option-text regular white-text pb-1 pl-lg-1 pl-0">Lorem ipsum dolor sit amet, consec dolor sit amet, consec tetur adipiscin elit.</p>
-                <a class="my-2 ml-1 white-text d-inline-block bold" href=""><p>Learn More</p></a>
-                <ul class="mt-5 mb-4 ml-1">
+                <a class="my-0-5 my-lg-2 ml-1 white-text d-inline-block bold button-main" href=""><p>Learn More</p></a>
+                <ul class="my-2 my-lg-4 ml-1">
                     <li><p class="white-text bold green-text">Guaranteed</p></li>
                     <li class="pt-1"><img src="assets/icons/optionlist-icon-5.svg" alt=""><p class="white-text d-inline-block pl-0-5">Cost Effective</p></li>
                     <li class="pt-1"><img src="assets/icons/optionlist-icon-6.svg" alt=""><p class="white-text d-inline-block pl-0-5">Warranty</p></li>
@@ -533,14 +561,14 @@
     <!-- options section end -->
 
     <!-- summary section starts -->
-    <section class="summary-section my-5 d-flex align-items-center justify-content-center text-center w-100 position-relative" id="summary-section">
-        <div>
+    <section class="my-5 d-flex align-items-center justify-content-center text-center w-100 position-relative" id="summary-section">
+        <div class="w-100">
             <img class="w-100" src="assets/images/summary-bg.png" alt="">
             <div class="container row bold w-100 px-5 white-text d-flex justify-content-between position-absolute">
 
                 <div class="col-lg-3 mx-0 mx-md-5 mx-lg-0">
                     <div class="m-auto py-3 py-lg-5 py-lg-2-5 px-0-5">
-                        <p class="counter" data-target="50" id="partnership-counter">0</p>
+                        <p class="d-inline-block">+ </p><p class="counter d-inline-block" data-target="50" id="partnership-counter">0</p>
                         <p>PARTNERSHIP</p>
                     </div>
                 </div>
@@ -563,72 +591,72 @@
     <!-- summary section ends -->
 
     <!-- clients section starts -->
-    <section class="clients-section container text-center" id="clients-section">
+    <section class="container text-center" id="clients-section">
         <p class="bold main-text">ALL OF THEM</p>
         <h2 class="green-text">CLIENTS</h2>
-        <div class="clients-wrapper">
+        <div class="clients-wrapper m-1 m-lg-4">
 
             <!-- Flickity HTML init -->
             <div class="clients-carousel d-md-flex flex-wrap justify-content-center" data-flickity='{ "watchCSS": true }'>
-                <div class="clients-carousel-cell px-5 px-lg-3 w-100 w-md-25 ml-md-0-25 d-flex justify-content-center align-items-center">
-                    <div class="clients-cell-inner w-100 py-1-5 px-3-5">
-                        <img src="assets/icons/ametal.svg" alt="">
+                <div class="clients-carousel-cell w-100 w-md-25 ml-0 ml-md-0-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner w-100 py-1 px-2">
+                        <img src="assets/icons/references/turkish_airlines.svg" alt="">
                     </div>
                 </div>
-                <div class="clients-carousel-cell px-5 px-lg-3 w-100 w-md-25 d-flex justify-content-center align-items-center">
-                    <div class="clients-cell-inner w-100 py-1-5 px-3-5">
-                        <img src="assets/icons/ametal.svg" alt="">
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner w-100 py-1 px-2">
+                        <img src="assets/icons/references/securex.svg" alt="">
                     </div>                    
                 </div>
-                <div class="clients-carousel-cell px-5 px-lg-3 w-100 w-md-25 d-flex justify-content-center align-items-center">
-                    <div class="clients-cell-inner w-100 py-1-5 px-3-5">
-                        <img src="assets/icons/ars-construction-1.png" alt="">
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner w-100 py-1 px-2">
+                        <img src="assets/icons/references/cat-mahal-hotel.svg" alt="">
                     </div>                    
                 </div>
-                <div class="clients-carousel-cell px-5 px-lg-3 w-100 w-md-25 d-flex justify-content-center align-items-center">
-                    <div class="clients-cell-inner w-100 py-1-5 px-3-5">
-                        <img src="assets/icons/ametal.svg" alt="">
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner w-100 py-1 px-2">
+                        <img src="assets/icons/references/the-kingdom-of-buganda.svg" alt="">
                     </div>                    
                 </div>
-                <div class="clients-carousel-cell px-5 px-lg-3 w-100 w-md-25 d-flex justify-content-center align-items-center">
-                    <div class="clients-cell-inner w-100 py-1-5 px-3-5">
-                        <img src="assets/icons/ametal.svg" alt="">
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner w-100 py-1 px-2">
+                        <img src="assets/icons/references/ametal.svg" alt="">
                     </div>                    
                 </div>
-                <div class="clients-carousel-cell px-5 px-lg-3 w-100 w-md-25 d-flex justify-content-center align-items-center">
-                    <div class="clients-cell-inner w-100 py-1-5 px-3-5">
-                        <img src="assets/icons/ametal.svg" alt="">
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner w-100 py-1 px-2">
+                        <img src="assets/icons/references/ars-construction.svg" alt="">
                     </div>                    
                 </div>
-                <div class="clients-carousel-cell px-5 px-lg-3 w-100 w-md-25 d-flex justify-content-center align-items-center">
-                    <div class="clients-cell-inner w-100 py-1-5 px-3-5">
-                        <img src="assets/icons/ametal.svg" alt="">
+                <div class="clients-carousel-cell w-100 w-md-25 d-flex justify-content-center align-items-center">
+                    <div class="clients-cell-inner w-100 py-1 px-2">
+                        <img src="assets/icons/references/growhomeseed.svg" alt="">
                     </div>                    
                 </div>                
             </div>
             
         </div>
-        <a class="my-1 bold d-inline-block mx-auto main-text" href="#"><p>VIEW ALL</p></a>
+        <a class="my-3 bold d-inline-block mx-auto main-text button-main" href="references.html#clients-section"><p>VIEW ALL</p></a>
 
     </section>
     <!-- clients section ends -->
 
     <!-- contact section starts -->
     <section class="contact-section container my-4" id="contact-section">
-        <div class="row">
+        <div class="row align-items-right">
             <div class="col-lg-7 mt-auto d-flex flex-column">
                 <h2 class="green-text pb-0-5">HERE WE ARE</h2>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888164.400225498!2d31.733888385233417!3d1.3251658140792526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a69f6499f945%3A0x874155ce43014549!2sUganda!5e0!3m2!1sen!2str!4v1649919833189!5m2!1sen!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
             </div>
             <div class="col-lg-5 pt-2 pl-lg-2">
-                <div class="grey-bg py-5">
-                    <h2 class="pb-2 text-center">Get an Offer!</h2>
-                    <form action="" class="d-flex flex-column pl-4 pr-4">
-                        <label class="py-0-5 regular" for="name-surname"><p>Name-Surname</p><input class="w-75" type="text" name="name-surname" id="name-surname"></label>
-                        <label class="py-1 regular" for="phone-number"><p>Phone Number</p><input class="w-75" type="tel" name="phone-number" id="phone-number"></label>
-                        <label class="py-1 regular" for="email"><p>Email</p><input class="w-75" type="text" name="email" id="email"></label>
-                        <label class="py-1 regular" for="message"><p>Your Message</p><input class="w-75" type="text" name="message" id="message"></label>
-                        <label class="py-1 regular" for="checkbox"><input class="mr-0-5" type="checkbox" id="checkbox" name="checkbox" required>I agree to the processing of personal data</label>
+                <div class="grey-bg py-5 d-flex flex-column justify-content-around align-items-center">
+                    <h2 class="text-center">Get an Offer!</h2>
+                    <form action="" class="d-flex flex-column px-1 px-lg-4">
+                        <input class="w-100 w-md-75 mx-0 pt-2 pb-0-5 regular" type="text" name="name-surname" id="name-surname" placeholder="Name-Surname">
+                        <input class="w-100 w-md-75 mx-0 pt-2 pb-0-5 regular" type="tel" name="phone-number" id="phone-number" placeholder="Phone Number">
+                        <input class="w-100 w-md-75 mx-0 pt-2 pb-0-5 regular" type="text" name="email" id="email" placeholder="Email">
+                        <input class="w-100 w-md-75 mx-0 pt-2 pb-0-5 regular" type="text" name="message" id="message" placeholder="Your Message">
+                        <label class="mx-0 py-1 regular" for="checkbox"><input class="mr-0-5" type="checkbox" id="checkbox" name="checkbox" required>I agree to the processing of personal data</label>
                         <input class="m-auto mt-0-5 bold" type="submit" value="SEND">
                     </form>
                 </div>
@@ -653,8 +681,8 @@
                         <li class="pt-1">
                             <p><a href="">About Us</a></p>
                         </li>
-                        <li class="pt-1 d-md-none">
-                            <p><a  href="">Contact Us</a></p>
+                        <li class="pt-1" id="contactus-footer">
+                            <p><a href="">Contact Us</a></p>
                             
                         </li>
                     </ul>
@@ -666,7 +694,7 @@
                     <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-loc-icon.svg" alt=""><p class="pl-1">Plot 7/8 2nd Street Industrial Area Kampala/Uganda</p></li>
                 </ul>
             </div>  
-            <p class="w-100 pt-4 text-center">Copyrights reserved by Perfist inc.</p> 
+            <p class="w-100 pt-4 text-center">Copyrights reserved by Zeta Design</p> 
         </div>
 
     </footer>
@@ -706,7 +734,7 @@
 
         /* summary counters start */
         const counters = document.querySelectorAll('.counter');
-        const speed = 50; // The lower the slower
+        const speed = 50; // The slower speed
 
         counters.forEach(counter => {
             const updateCount = () => {

@@ -12,15 +12,27 @@
 
     /* mobile view starts */
 
-    #product-section img {
+    #product-section img:first-child{
         object-fit: cover;
-        height: 25vh;
+        height: 12.5rem;
+    }
+
+    #product-section > .container > .container > div > img {
+        object-fit: cover;
+        height: 31.25;
     }
 
     #product-section h1 {
-        transform: translateX(-50%);
-        font-size: 40px;
-        top: 25%;
+        transform: translate(-50%,-100%);
+        font-size: 36px;
+    }
+
+    #product-section h3 {
+        font-size: 24px;
+    }
+
+    #product-section h4 {
+        font-size: 26px;
     }
 
     #product-section > .container {
@@ -28,49 +40,53 @@
         background: transparent;
     }
 
-    #product-section > .container > img {
-        height: 300px;
-        object-fit: cover;
-    }
-
     #product-section ul li::before {
         display: none;
     }
 
-    #product-section:nth-child(2) {
-        padding-bottom: 80px;
-    }
-
     #specifications-title {
         font-size: 10vw;
-        line-height: 34px;
+        line-height: 30px;
+    }    
+
+    @media (min-width: 425px) {
+        #specifications-title {
+            line-height: 35px;
+        }
     }
-    
 
     @media (min-width: 576px){
         
         #product-section > .container {
             margin-top:-70px;
         }
+
         #specifications-title {
-            font-size: 54px;
-        }
+            font-size: 56px;
+            line-height: 40px;
+        }    
+
     }
         
     @media (min-width: 768px){
-        #product-section img {
-            height: 100%;
+
+        #product-section img:first-child{
+            height: 25rem;
         }
         
         #product-section h1 {
-        font-size: 36px;
+            font-size: 60px;
         }
+
         #product-section > .container {
-        margin-top:-100px;
+            margin-top:-100px;
         }
+
         #specifications-title {
-            font-size: 74px;
+            font-size: 77px;
+            line-height: 55px;
         }
+
     } 
     
 
@@ -80,9 +96,16 @@
 
     @media (min-width: 992px){
 
-        #product-section h1 {
-            font-size: 48px;
-            top: 30%;
+        #product-section h3 {
+            font-size: 40px;
+        }
+
+        #product-section h4 {
+            font-size: 40px;
+        }
+
+        #product-section > .container > .container > div > img {
+            height: auto;
         }
 
         #specifications-main {
@@ -104,32 +127,31 @@
         }
 
         #product-section ul li p {
-            font-size: 18px;
+            font-size: 20px;
         }
 
         #specifications-title {
-            transform: rotate(-90deg) translateY(240%) translateX(-51%);
-            transform-origin: top;
-            top: 0;
-            right: 0;
+            transform: rotate(270deg) translateX(50%);     
+            transform-origin: 100% 0;
+            top: 50%;
+            right: 50px;
             font-size: 50px;
             display: block;
-            line-height: inherit;
+            line-height: 50px;
         }
 
-        #product-section:nth-child(2) {
-            padding-bottom: 160px;
-        }
     } 
     
     @media (min-width: 1200px){
+
         #product-section h1 {
-        font-size: 64px;
+            font-size: 64px;
         }
 
         #specifications-title {
-        font-size: 60px;
-    }
+            font-size: 60px;
+        }
+
     } 
     
     @media (min-width: 1400px){
@@ -140,6 +162,7 @@
         #specifications-title {
             font-size: 70px;
         }
+
     } 
 
     /* desktop view ends */
@@ -166,7 +189,7 @@
                     <p class="d-lg-none regular pl-0-5 text-white">+256 706 311 781</p>     
                 </div>                
             </div>  
-            <div class="nav-button d-none d-lg-block"><a href="contact.html#contact-wrapper" class="main-text bold">LET'S HAVE A TALK</a></div>
+            <div class="nav-button d-none d-lg-block"><a href="contact.html#contact-wrapper" class="main-text bold button-main">LET'S HAVE A TALK</a></div>
             <div class="nav-toggle-btn d-lg-none">
                 <button class="hamburger-menu-btn d-flex d-lg-none" onclick="navToggle()">
                     <span class="hamburger-menu-line position-absolute green-bg"></span>
@@ -180,17 +203,17 @@
     <!-- navigation ends -->
 
     <!-- product inner starts -->
-    <section class="green-bg" id="product-section">
+    <section class="green-bg pb-lg-5 pb-2" id="product-section">
         <div class="position-relative">
             <img class="w-100 d-block" src="assets/images/product-section-top.png" alt="">
-            <h1 class="w-100 text-center black white-text position-absolute left-50">ROOFING <span CLASS="green-text">SHEET</span></h1>              
+            <h1 class="w-100 text-center black white-text position-absolute top-50 left-50">ROOFING <span CLASS="green-text">SHEET</span></h1>              
         </div>
        
         <div class="container position-relative">
             
             <img class="w-100 d-block" src="assets/images/overview.png" alt="">
             <div class="white-bg regular p-2-5">
-                <p class="bold green-text text-center text-lg-left pb-1-5">Overview</p>
+                <h3 class="bold green-text text-center text-lg-left pb-1-5">Overview</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio laborum ipsa fuga sed consequatur obcaecati odio veritatis blanditiis animi aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint tenetur expedita consectetur sunt reprehenderit sapiente eveniet accusamus nostrum at fuga. </p>
             </div>
             <div class="container row p-0 m-0">
@@ -199,7 +222,7 @@
                 </div>
                 <div class="col-lg-7 p-0 position-relative">
                     <div class="dark-bg white-text bold position-relative d-flex align-items-center flex-column-reverse flex-lg-row" id="specifications-main">
-                        <ul class="w-100 pl-0 pl-lg-5 py-3 py-lg-0 pr-2 text-center text-lg-left">
+                        <ul class="w-100 px-lg-5 px-2 py-3 py-lg-0 text-center text-lg-left">
                             <li class="position-relative py-1"><p>Width: 97cm</p></li>
                             <li class="position-relative py-1"><p>Length: 200cm</p></li>
                             <li class="position-relative py-1"><p>Coverage Per Sheet: 1.63m2/Sheet</p></li>
@@ -210,13 +233,13 @@
                         <h2 class="position-lg-absolute position-static black white-text" id="specifications-title">SPECIFICATIONS</h2>
                     </div>
                     <div class="white-bg d-flex align-items-center justify-content-center">
-                        <h2 class="bold green-text py-3 py-lg-0">ADVANTAGES</h2>
+                        <h4 class="bold green-text py-3 py-lg-0">ADVANTAGES</h4>
                     </div>
                 </div>
             </div>
             <div class="container row p-0 m-0 flex-column-reverse flex-lg-row">
                 <div class="col-lg-5 p-0 dark-bg white-text bold d-flex align-items-center">
-                    <ul class="w-100 pl-0 pl-lg-5 py-3 py-lg-0 text-center text-lg-left" id="list-bottom">
+                    <ul class="w-100 px-0 px-lg-5 py-3 py-lg-0 text-center text-lg-left" id="list-bottom">
                         <li class="position-relative py-1"><p>Lightweight</p></li>
                         <li class="position-relative py-1"><p>8 years waterproofing</p></li>
                         <li class="position-relative py-1"><p>Warranty</p></li>
@@ -251,7 +274,7 @@
                         <li class="pt-1">
                             <p><a href="">About Us</a></p>
                         </li>
-                        <li class="pt-1 d-md-none">
+                        <li class="pt-1" id="contactus-footer">
                             <p><a  href="">Contact Us</a></p>
                             
                         </li>
@@ -264,7 +287,7 @@
                     <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-loc-icon.svg" alt=""><p class="pl-1">Plot 7/8 2nd Street Industrial Area Kampala/Uganda</p></li>
                 </ul>
             </div>  
-            <p class="w-100 pt-4 text-center">Copyrights reserved by Perfist inc.</p> 
+            <p class="w-100 pt-4 text-center">Copyrights reserved by Zeta Design</p> 
         </div>
 
     </footer>

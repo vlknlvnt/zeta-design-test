@@ -14,7 +14,7 @@
 
         iframe {
             width: 100%;
-            min-height: 580px;
+            min-height: 25rem;
         }
 
         iframe, .contact-section > .row > div > div {
@@ -37,6 +37,10 @@
             font-size: 36px;
         }
 
+        #contact-section > .row > div > div {
+            height: 630px;
+        }
+
         #contact-section > .row > div:last-child > div {
             border-radius: 20px;
             box-shadow: 0px 0px 5px 3px rgb(229 229 229);
@@ -48,12 +52,22 @@
             padding: 0.5px
         }
 
+        input::placeholder {
+            font-family: 'Montserrat-Regular';
+            color: black;
+            font-size: 1rem;
+        }  
+        
+        input:focus::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
         input[type=submit] {
             background-color: var(--green);
             border: none;
             border-radius: 20px;
             width: 100%;
-            height: 40px;
+            height: 2.5rem;
             color: white;
             background-image: url('assets/icons/send-icon.svg');
             background-repeat: no-repeat;
@@ -97,7 +111,7 @@
         @media (min-width: 768px) {
 
             input[type=submit] {
-                max-width: 300px;
+                max-width: 18.75rem;
             }
 
             #contact-section h1:first-of-type {
@@ -107,6 +121,11 @@
         }
 
         @media (min-width: 992px) {
+
+            iframe {
+                width: 100%;
+                min-height: 36.25rem;
+            }
 
             input[type=submit] {
                 width: 100%;
@@ -167,7 +186,7 @@
                     <p class="d-lg-none pl-0-5 regular text-white">+256 706 311 781</p>     
                 </div>                
             </div>  
-            <div class="nav-button d-none d-lg-block"><a href="#contact-wrapper" class="main-text bold">LET'S HAVE A TALK</a></div>
+            <div class="nav-button d-none d-lg-block"><a href="#contact-wrapper" class="main-text bold button-main">LET'S HAVE A TALK</a></div>
             <div class="nav-toggle-btn d-lg-none">
                 <button class="hamburger-menu-btn d-flex d-lg-none" onclick="navToggle()">
                     <span class="hamburger-menu-line position-absolute green-bg"></span>
@@ -181,26 +200,21 @@
     <!-- navigation ends -->
 
     <!-- contact section starts -->
-    <section class="my-4" id="contact-section">
-
-        <div class="position-relative">
-            <img class="w-100 d-block" src="assets/images/contact-top.png" alt="">
-            <h1 class="w-100 text-center black white-text position-absolute left-0">CONTACT <span class="green-text">US</span></h1>              
-        </div>
-
-        <div class="row container m-auto py-5 px-0" id="contact-wrapper">
+    <section class="container my-4" id="contact-section">
+        <div class="row align-items-right py-1 py-lg-4">
             <div class="col-lg-7 mt-auto d-flex flex-column">
                 <h2 class="green-text pb-0-5">HERE WE ARE</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888164.400225498!2d31.733888385233417!3d1.3251658140792526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a69f6499f945%3A0x874155ce43014549!2sUganda!5e0!3m2!1sen!2str!4v1649919833189!5m2!1sen!2str" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888164.400225498!2d31.733888385233417!3d1.3251658140792526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1771a69f6499f945%3A0x874155ce43014549!2sUganda!5e0!3m2!1sen!2str!4v1649919833189!5m2!1sen!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+            </div>
             <div class="col-lg-5 pt-2 pl-lg-2">
-                <div class="grey-bg py-5">
-                    <h2 class="pb-2 text-center">Get an Offer!</h2>
-                    <form action="" class="d-flex flex-column pl-4 pr-4">
-                        <label class="py-0-5 regular" for="name-surname"><p>Name-Surname</p><input class="w-75" type="text" name="name-surname" id="name-surname"></label>
-                        <label class="py-1 regular" for="phone-number"><p>Phone Number</p><input class="w-75" type="tel" name="phone-number" id="phone-number"></label>
-                        <label class="py-1 regular" for="email"><p>Email</p><input class="w-75" type="text" name="email" id="email"></label>
-                        <label class="py-1 regular" for="message"><p>Your Message</p><input class="w-75" type="text" name="message" id="message"></label>
-                        <label class="py-1 regular" for="checkbox"><input class="mr-0-5" type="checkbox" id="checkbox" name="checkbox" required>I agree to the processing of personal data</label>
+                <div class="grey-bg py-5 d-flex flex-column justify-content-around align-items-center">
+                    <h2 class="text-center">Get an Offer!</h2>
+                    <form action="" class="d-flex flex-column px-1 px-lg-4">
+                        <input class="w-100 w-md-75 mx-0 pt-2 pb-0-5 regular" type="text" name="name-surname" id="name-surname" placeholder="Name-Surname">
+                        <input class="w-100 w-md-75 mx-0 pt-2 pb-0-5 regular" type="tel" name="phone-number" id="phone-number" placeholder="Phone Number">
+                        <input class="w-100 w-md-75 mx-0 pt-2 pb-0-5 regular" type="text" name="email" id="email" placeholder="Email">
+                        <input class="w-100 w-md-75 mx-0 pt-2 pb-0-5 regular" type="text" name="message" id="message" placeholder="Your Message">
+                        <label class="mx-0 py-1 regular" for="checkbox"><input class="mr-0-5" type="checkbox" id="checkbox" name="checkbox" required>I agree to the processing of personal data</label>
                         <input class="m-auto mt-0-5 bold" type="submit" value="SEND">
                     </form>
                 </div>
@@ -225,7 +239,7 @@
                         <li class="pt-1">
                             <p><a href="">About Us</a></p>
                         </li>
-                        <li class="pt-1 d-md-none">
+                        <li class="pt-1" id="contactus-footer">
                             <p><a  href="">Contact Us</a></p>
                             
                         </li>
@@ -238,7 +252,7 @@
                     <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-loc-icon.svg" alt=""><p class="pl-1">Plot 7/8 2nd Street Industrial Area Kampala/Uganda</p></li>
                 </ul>
             </div>  
-            <p class="w-100 pt-4 text-center">Copyrights reserved by Perfist inc.</p> 
+            <p class="w-100 pt-4 text-center">Copyrights reserved by Zeta Design</p> 
         </div>
 
     </footer>

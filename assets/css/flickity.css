@@ -13,7 +13,10 @@ https://flickity.metafizzy.co
   .flickity-viewport {
     overflow: hidden;
     position: relative;
-    height: 100%;
+  }
+
+  .clients-carousel > .flickity-viewport {
+    height: 175px!important; /* giving height to flickity viewport under client-carousel */ /* levent 06.05.2022 */
   }
   
   .flickity-slider {
@@ -122,7 +125,6 @@ https://flickity.metafizzy.co
   .flickity-page-dots {
     position: absolute;
     width: 100%;
-    bottom: -25px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -132,7 +134,10 @@ https://flickity.metafizzy.co
   }
 
   .clients-carousel > .flickity-page-dots {
-    display: block; /* levent 14.04.2022 */ /* flickity dots appear in clients slider */
+    bottom: -40px; /* levent 06.05.2022 */ /* flickity dots appear in clients slider */
+    display: flex; /* levent 06.05.2022 */
+    align-items: center; /* levent 06.05.2022 */
+    justify-content: center; /* levent 06.05.2022 */ /* flickity dots appear in clients slider */
   }
   
   .flickity-rtl .flickity-page-dots { direction: rtl; }
@@ -153,8 +158,6 @@ https://flickity.metafizzy.co
     background: var(--green);
   }
 
-
-
   /* mobil view starts */ 
 
   @media (max-width: 1400px) {
@@ -164,11 +167,12 @@ https://flickity.metafizzy.co
   }
 
   @media (max-width: 992px) {
-    .slider-section > .main-carousel > .flickity-page-dots, .clients-carousel > .flickity-page-dots  {
+    #slider-section > .main-carousel > .flickity-page-dots {
       /* dots both in main slider and clients slider will appear same and in line */ /* levent 14.04.2022 */
       display: flex; /* levent 14.04.2022 */
       align-items: center; /* levent 14.04.2022 */
       justify-content: center; /* levent 14.04.2022 */
+      bottom: 40px; /* levent 06.05.2022 */
     }    
 
     .slider-section > .main-carousel > .flickity-page-dots {
@@ -182,6 +186,8 @@ https://flickity.metafizzy.co
   }
 
   /* mobil view ends */
+
+
 
   /* flickity for clients-carousel starts */
   
