@@ -247,9 +247,10 @@ nav img {
 /* navigation ends */ 
 
 /* footer starts */
-footer ul + ul:last-child li img {
-    width: 14px;
+footer > .container > div + div > ul > li > img {
+    width: 20px;
 }
+
 
 #contactus-footer {
     display: none;

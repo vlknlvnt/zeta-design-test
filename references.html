@@ -17,7 +17,7 @@
         }
 
         #clients-section :nth-child(2) {
-            gap: 4rem;
+            gap: 2rem;
         }
 
         #clients-section :nth-child(2) > div {
@@ -56,7 +56,7 @@
 
         #clients-section :nth-child(2) > div > img {
             width: 100%;
-            height: 6.25rem; /* client logo height increases in mobile view */
+            height: 4rem; /* client logo height decreases in mobile view */
             filter: saturate(0);
             transition: var(--transition);
         }
@@ -67,7 +67,21 @@
 
         /* mobile view ends */
 
-        
+        /* desktop view starts */
+
+        @media (min-width: 992px) {
+
+            #clients-section :nth-child(2) {
+                gap: 4rem;   
+            }
+
+            #clients-section :nth-child(2) > div > img {
+                height: 6.25rem; /* client logo height increases in mobile view */
+            }
+                      
+        }
+
+        /* desktop view ends */
 
         
 
@@ -84,7 +98,7 @@
                 <ul class="d-flex w-100 flex-lg-row flex-column py-lg-0 py-3 text-center bold">
                     <li class="py-lg-0 py-2 position-relative"><a href="products.html">Products</a></li>
                     <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="services.html">Services</a></li>
-                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="references.html">References</a></li>
+                    <li class="py-lg-0 py-2 ml-lg-3-5 position-relative selected"><a href="references.html">References</a></li>
                     <li class="py-lg-0 py-2 ml-lg-3-5 position-relative"><a href="contact.html">Contact Us</a></li>
                 </ul>
                 <div class="nav-phone-info d-lg-none d-flex position-absolute align-items-center py-3 left-50">
@@ -109,8 +123,8 @@
     <!-- clients section starts -->
     <section class="green-bg py-lg-4 py-2" id="clients-section">
 
-        <div class="container">
-            <p class="bold dark-text text-left text-lg-center ml-1">ALL OF THEM</p>
+        <div class="container my-2 my-lg-0">
+            <p class="bold main-text text-left text-lg-center ml-1">ALL OF THEM</p>
             <h2 class="white-text text-left text-lg-center ml-1">CLIENTS</h2>           
         </div>
 
@@ -197,9 +211,9 @@
             </div>
             <div class="col-md-6 d-none d-md-block">
                 <ul class="ml-5 mt-1">
-                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-mail-icon.svg" alt=""><p class="pl-1">zetadesignsltd@gmail.com</p></li>
-                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-phone-icon.svg" alt=""><p class="pl-1">+256 706 311 781</p></li>
-                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-loc-icon.svg" alt=""><p class="pl-1">Plot 7/8 2nd Street Industrial Area Kampala/Uganda</p></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-mail-icon.svg" alt=""><a href="mailto:zetadesignsltd@gmail.com" class="pl-1">zetadesignsltd@gmail.com</a></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-phone-icon.svg" alt=""><a href="tel:+256700836541" class="pl-1">+256 700 836 541</a></li>
+                    <li class="d-flex justify-content-left align-items-center pt-1"><img src="assets/icons/footer-loc-icon.svg" alt=""><a target="_blank" href="https://www.google.com/maps/place/Zeta+Design/@0.3211625,32.5944733,15z/data=!4m9!1m2!2m1!1s7%2F8+Second+Street,+Kampala,+Uganda!3m5!1s0x177dbb430950ab29:0xf4377aafb5edde2d!8m2!3d0.3211625!4d32.603228!15sCiI3LzggU2Vjb25kIFN0cmVldCwgS2FtcGFsYSwgVWdhbmRhWiIiIDcgOCBzZWNvbmQgc3RyZWV0IGthbXBhbGEgdWdhbmRhkgEUY29uc3RydWN0aW9uX2NvbXBhbnk" class="pl-1">Plot 7/8 2nd Street Industrial Area Kampala/Uganda</a></li>
                 </ul>
             </div>  
             <p class="w-100 pt-4 text-center">Copyrights reserved by Zeta Design</p> 
